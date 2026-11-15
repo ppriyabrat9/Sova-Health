@@ -1,0 +1,1813 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sova Category Plan</title>
+<meta name="description" content="A category plan for Sova Health's diagnostics and supplements line, by Preetam Priyabrat. November 2026.">
+<link rel="icon" href="assets/img/sova-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.className="js"</script>
+<style>
+:root{
+  --forest:#203129; --forest2:#2a3f35; --ink:#18241e; --gray:#66756d; --gray2:#8a978f;
+  --mint:#1fd286; --mintsoft:#dcf7ea; --amber:#fbb000; --ambersoft:#fff2cf;
+  --box:#33266e; --boxsoft:#ebe7f8; --teal:#0f5e53; --mist:#f2f6f3; --line:#e1e9e4; --red:#c8492f; --redsoft:#fbe5de;
+  --nav:62px; --r:18px;
+  --g-card:linear-gradient(160deg,#ffffff 0%,#f4f8f5 100%);
+  --g-dark:linear-gradient(160deg,#2c4338 0%,#24382e 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--nav)}
+body{font-family:Poppins,system-ui,sans-serif;color:var(--ink);background:#fff;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:1640px;margin:0 auto;padding:0 clamp(20px,4vw,64px);position:relative;z-index:1}
+
+/* one topic per screen */
+.screen{padding:clamp(32px,4vh,52px) 0;position:relative;overflow:hidden}
+.dark{background:var(--forest);color:#ecf5f0}
+.mist{background:var(--mist)}
+
+h1,h2,h3,h4{letter-spacing:-.02em;font-weight:600;line-height:1.12}
+h2{font-size:clamp(28px,2.7vw,46px);max-width:24ch}
+h3{font-size:clamp(17px,1.25vw,20px)}
+h4{font-size:16.5px;line-height:1.3}
+p{max-width:70ch}
+.head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:end;margin-bottom:clamp(20px,2.6vh,32px)}
+.head .lede{margin:0}
+.lede{font-size:clamp(15.5px,1.1vw,18px);color:var(--gray);max-width:58ch}
+.dark .lede{color:#a9c1b4}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:14.5px;font-weight:600;color:var(--gray);margin-bottom:12px}
+.eyebrow b{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--forest);color:var(--mint);font-size:12.5px}
+.dark .eyebrow{color:#9db6a9}.dark .eyebrow b{background:var(--mint);color:var(--forest)}
+.note{font-size:13.5px;color:var(--gray2);margin-top:10px;max-width:100ch}
+.dark .note{color:#8fa99b}
+.num{font-variant-numeric:tabular-nums}
+
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.g5{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.card{background:var(--g-card);border:1px solid var(--line);border-radius:var(--r);padding:clamp(16px,1.4vw,22px)}
+.card p,.dcard p{font-size:15px;color:var(--gray);margin-top:6px;line-height:1.5}
+.dcard{background:var(--g-dark);border:1px solid rgba(255,255,255,.07);border-radius:var(--r);padding:clamp(16px,1.4vw,22px)}
+.dcard p{color:#a9c1b4}
+.dcard h3,.dcard h4{color:#fff}
+.stat{font-size:clamp(26px,2.3vw,38px);font-weight:600;letter-spacing:-.03em;line-height:1;display:block}
+.card .stat{color:var(--forest)}
+.chip{display:inline-block;font-size:12px;font-weight:600;padding:3px 10px;border-radius:99px}
+.c-test{background:var(--boxsoft);color:var(--box)}.c-sup{background:var(--mintsoft);color:#0d6a42}.c-new{background:var(--ambersoft);color:#765300}.c-risk{background:var(--redsoft);color:#8b2c18}
+.btn{font:inherit;font-weight:600;font-size:14.5px;padding:11px 20px;border-radius:99px;border:0;cursor:pointer;background:var(--amber);color:var(--forest);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px -12px rgba(0,0,0,.4)}
+.btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor}
+.btn svg{width:17px;height:17px}
+
+/* reveal, one by one */
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .in .rv{opacity:1;transform:none}
+
+/* signature curve */
+.curve{position:absolute;pointer-events:none;z-index:0;width:min(46vw,640px);height:auto;opacity:.5}
+.curve path{fill:none;stroke-width:14;stroke-linecap:round;stroke-linejoin:round}
+.curve.r{right:-80px;top:20px}.curve.l{left:-120px;bottom:10px}
+.mist .curve path,.light .curve path{stroke:#d9eee3}
+.dark .curve path{stroke:#2f4a3d}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:60;height:var(--nav);background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:18px;height:100%}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:500;font-size:14px;flex-shrink:0;color:var(--gray)}
+.brand img{height:24px;width:auto}
+.brand span{border-left:1px solid var(--line);padding-left:10px}
+.menu{display:flex;gap:2px;list-style:none;margin-left:auto}
+.menu a{display:block;padding:7px 13px;border-radius:99px;text-decoration:none;font-size:14px;font-weight:500;color:var(--gray);white-space:nowrap;transition:background .2s,color .2s}
+.menu a:hover{background:var(--mist);color:var(--forest)}
+.menu a.on{background:var(--forest);color:#fff}
+.menu-btn{display:none;margin-left:auto;font:inherit;font-weight:600;font-size:14px;background:var(--forest);color:#fff;border:0;border-radius:99px;padding:8px 16px;cursor:pointer}
+.pline{position:absolute;left:0;right:0;bottom:-4px;width:100%;height:8px;overflow:visible}
+.pline path{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-linecap:round}
+
+/* hero: one full screen, pinned while the box opens */
+.hero{background:radial-gradient(1200px 600px at 78% 40%,#2c4a3c 0%,var(--forest) 60%);color:#fff;height:calc(100svh - var(--nav) + 75vh);position:relative}
+.hero .pin{position:sticky;top:var(--nav);height:calc(100svh - var(--nav));display:flex;flex-direction:column;justify-content:center;padding:clamp(28px,4.5vh,56px) 0;overflow:hidden}
+.hero .grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(24px,4vw,64px);align-items:center;flex:1;min-height:0}
+.hero .logo{height:34px;width:auto;margin-bottom:24px}
+.hero h1{font-size:clamp(36px,4.2vw,68px);letter-spacing:-.035em;line-height:1.04;max-width:15ch}
+.hero h1 span{color:var(--mint)}
+.hero .lede{color:#b9cfc3;margin-top:18px;max-width:50ch}
+.by{display:flex;align-items:center;gap:12px;margin-top:26px}
+.by img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--mint)}
+.by strong{display:block;font-size:15.5px;font-weight:600}
+.by span{font-size:13.5px;color:#9db6a9}
+.strip{margin-top:clamp(18px,3vh,32px)}
+.strip .dcard .stat{color:#fff}
+.strip .dcard p{font-size:14px}
+
+/* the kit box */
+.stage{position:relative;height:100%;min-height:440px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:52px}
+.scene{--W:330px;--H:390px;--D:130px;width:var(--W);height:var(--H);perspective:1500px;transform:scale(var(--s,1));transform-origin:50% 100%;position:relative;z-index:1}
+.box3d{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateX(-14deg) rotateY(calc(-32deg + var(--p,0) * 14deg)) translateY(calc(var(--p,0) * 10px));animation:bob 5s ease-in-out infinite}
+@keyframes bob{50%{translate:0 -8px}}
+.face{position:absolute;overflow:hidden}
+.f-front,.f-back{width:var(--W);height:var(--H)}
+.f-front{transform:translateZ(calc(var(--D) / 2));background:linear-gradient(160deg,#3b2c80 0%,#2f2268 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.f-back{transform:rotateY(180deg) translateZ(calc(var(--D) / 2));background:#251a55}
+.f-right,.f-left{width:var(--D);height:var(--H);left:calc((var(--W) - var(--D)) / 2)}
+.f-right{transform:rotateY(90deg) translateZ(calc(var(--W) / 2));background:linear-gradient(180deg,#2a1e5e,#21174c)}
+.f-left{transform:rotateY(-90deg) translateZ(calc(var(--W) / 2));background:#241a52}
+.f-bottom{width:var(--W);height:var(--D);top:calc((var(--H) - var(--D)) / 2);transform:rotateX(-90deg) translateZ(calc(var(--H) / 2));background:#1a1240}
+.f-floor{width:calc(var(--W) - 8px);height:calc(var(--D) - 8px);left:4px;top:calc((var(--H) - var(--D)) / 2 + 4px);transform:rotateX(-90deg) translateZ(calc(var(--H) / 2 - 6px));background:radial-gradient(circle at 50% 50%,#2a1f63,#140d33)}
+.lid{position:absolute;left:0;top:0;width:var(--W);height:var(--D);transform-origin:50% 0;transform-style:preserve-3d;transform:translateZ(calc(var(--D) / -2)) rotateX(calc(90deg + var(--p,0) * 122deg))}
+.lid .out,.lid .in{position:absolute;inset:0;backface-visibility:hidden}
+.lid .out{background:linear-gradient(180deg,#43339a,#36287c);display:flex;align-items:center;justify-content:center;gap:10px;color:#fff;font-weight:600;font-size:15px;box-shadow:inset 0 -2px 0 rgba(0,0,0,.15)}
+.lid .out img{height:26px;width:auto}
+.lid .in{transform:rotateY(180deg);background:linear-gradient(180deg,#1b1344,#2a1f63)}
+.lid .in::after{content:"Open me";position:absolute;inset:auto 0 14px;text-align:center;font-size:12px;color:#8f84c9;letter-spacing:.08em}
+.f-front .perf{position:absolute;left:0;right:0;top:46px;border-top:1.5px dashed rgba(170,160,230,.45)}
+.f-front .perf.b{top:52px;border-top-width:1px;opacity:.6}
+.f-front .brandrow{position:absolute;left:22px;top:14px;display:flex;align-items:center;gap:6px}
+.f-front .brandrow img{height:20px;width:auto}
+.f-front .ttl{position:absolute;right:20px;top:80px;text-align:right}
+.f-front .ttl b{display:block;font-size:26px;font-weight:700;color:#f6c24d;letter-spacing:-.02em;line-height:1.05}
+.f-front .ttl span{display:block;font-size:11px;font-weight:600;color:#fff;letter-spacing:.06em;margin-top:6px;line-height:1.35}
+.ribbon{position:absolute;left:-8px;bottom:-6px;width:calc(var(--W) + 16px);height:auto}
+.ribbon path{fill:none;stroke:#f3bf5a;stroke-width:34;stroke-linecap:round;stroke-linejoin:round}
+.f-front .seal{position:absolute;left:18px;bottom:18px;width:64px;height:64px;border-radius:50%;background:#2a1f63;border:2px solid #f3bf5a;color:#fff;display:grid;place-items:center;text-align:center;font-size:10.5px;line-height:1.15;font-weight:700}
+.f-front .seal small{display:block;font-size:8.5px;color:#f3bf5a;font-weight:600}
+.f-right span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(90deg);white-space:nowrap;font-size:12px;font-weight:600;color:#c8bff2;letter-spacing:.04em}
+.f-right .rib2{position:absolute;left:-30px;bottom:30px;width:180px;height:120px}
+.f-right .rib2 path{fill:none;stroke:#e0ad4c;stroke-width:34;stroke-linecap:round}
+.paper{position:absolute;left:calc(var(--W) * .11);top:calc(var(--H) * .14);width:calc(var(--W) * .78);height:calc(var(--H) * .72);border-radius:14px;padding:18px 18px;display:flex;flex-direction:column;justify-content:flex-start;gap:4px;box-shadow:0 10px 30px -10px rgba(0,0,0,.4)}
+.paper b{font-size:30px;font-weight:700;letter-spacing:-.03em;line-height:1}
+.paper span{font-size:13px;font-weight:500;opacity:.85}
+.paper.p1{background:#f6c24d;color:#2a1f63}
+.paper.p2{background:var(--mint);color:var(--forest)}
+.paper.p3{background:#fff;color:var(--forest)}
+.shadow{position:absolute;bottom:36px;left:50%;width:400px;height:46px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(0,0,0,.45),transparent);filter:blur(4px);z-index:0}
+.cue{position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);display:flex;align-items:center;gap:8px;font-size:13px;color:#9db6a9;transition:opacity .3s;white-space:nowrap}
+.cue i{width:18px;height:28px;border:2px solid #9db6a9;border-radius:10px;position:relative}
+.cue i::after{content:"";position:absolute;left:50%;top:5px;width:3px;height:6px;border-radius:2px;background:#9db6a9;transform:translateX(-50%);animation:wheel 1.6s ease-in-out infinite}
+@keyframes wheel{0%{opacity:0;transform:translate(-50%,0)}40%{opacity:1}100%{opacity:0;transform:translate(-50%,8px)}}
+@media (min-width:1600px){.scene{--s:1.12}}
+@media (max-width:1280px){.scene{--s:.92}}
+@media (max-height:860px) and (min-width:961px){.scene{--s:.82}}
+@media (max-height:740px) and (min-width:961px){.scene{--s:.7}.hero .logo{margin-bottom:14px}.by{margin-top:16px}}
+
+/* thesis: gradient cards */
+.quote{font-size:clamp(20px,2vw,34px);line-height:1.38;letter-spacing:-.012em;color:var(--forest);font-weight:500;max-width:58ch}
+.quote mark{background:linear-gradient(transparent 60%,var(--ambersoft) 60%);color:inherit}
+.bets{margin-top:clamp(22px,3.5vh,40px)}
+.bet{border-radius:var(--r);padding:22px 20px;border:1px solid var(--line);display:flex;flex-direction:column;gap:8px;min-height:230px;transition:transform .3s,box-shadow .3s}
+.bet:hover{transform:translateY(-4px);box-shadow:0 18px 30px -22px rgba(32,49,41,.45)}
+.bet .n{font-size:48px;font-weight:700;line-height:1;background:linear-gradient(135deg,var(--forest),var(--mint));-webkit-background-clip:text;background-clip:text;color:transparent}
+.bet h4{font-size:18px;color:var(--ink);margin-top:auto}
+.bet p{font-size:15px;color:var(--gray);line-height:1.5}
+.bet:nth-child(1){background:linear-gradient(160deg,#e3f8ee 0%,#fff 70%)}
+.bet:nth-child(2){background:linear-gradient(160deg,#ece8fa 0%,#fff 70%)}
+.bet:nth-child(3){background:linear-gradient(160deg,#fff3d6 0%,#fff 70%)}
+.bet:nth-child(4){background:linear-gradient(160deg,#dff1ee 0%,#fff 70%)}
+.bet:nth-child(5){background:linear-gradient(160deg,#eef2ef 0%,#fff 70%)}
+
+/* timeline cards */
+.tline{position:relative;margin-top:14px}
+.tline svg{position:absolute;left:0;right:0;top:9px;width:100%;height:20px;z-index:0}
+.tline svg path{fill:none;stroke:var(--mint);stroke-width:2.5;stroke-dasharray:4 7;opacity:.6}
+.tline .g7{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px;position:relative;z-index:1}
+.tcard{padding-top:34px;position:relative}
+.tcard::before{content:"";position:absolute;top:10px;left:4px;width:16px;height:16px;border-radius:50%;background:var(--forest);border:3px solid var(--mint)}
+.tcard.now::before{background:var(--amber);border-color:var(--amber)}
+.tcard .dcard{height:100%}
+.tcard time{font-size:12.5px;color:var(--mint);font-weight:600;display:block}
+.tcard p{font-size:14.5px;color:#d0e0d7;margin-top:4px}
+.founder{display:flex;align-items:center;gap:14px}
+.founder img{width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0}
+
+/* market */
+.calc{background:var(--forest);color:#e7f1ec;border-radius:var(--r);padding:clamp(18px,1.6vw,26px)}
+.calc .row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed rgba(255,255,255,.16);font-size:15.5px}
+.calc .row b{color:var(--mint);font-weight:600;white-space:nowrap}
+.calc .row.tot{border:0;font-size:16px}
+.calc .row.tot b{color:var(--amber)}
+.ctable{width:100%;border-collapse:collapse;font-size:15.5px;margin-top:6px}
+.ctable td{padding:8px 0;border-bottom:1px solid var(--line)}
+.ctable td:last-child{text-align:right;font-weight:600;white-space:nowrap;padding-left:10px}
+.ctable tr.us td{color:var(--box)}
+
+/* products */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tab{font:inherit;font-size:14px;font-weight:600;padding:8px 16px;border-radius:99px;border:1.5px solid var(--line);background:#fff;color:var(--gray);cursor:pointer;transition:all .2s}
+.tab:hover{border-color:var(--forest);color:var(--forest)}
+.tab[aria-selected="true"]{background:var(--forest);border-color:var(--forest);color:#fff}
+.panel[hidden]{display:none}
+.panel{animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.skus{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.sku{display:grid;grid-template-columns:108px 1fr;gap:14px;align-items:center;background:var(--g-card);border:1px solid var(--line);border-radius:16px;padding:10px;transition:transform .25s,box-shadow .25s}
+.sku:hover{transform:translateY(-3px);box-shadow:0 16px 28px -22px rgba(0,0,0,.4)}
+.sku .im{width:108px;height:108px;border-radius:12px;overflow:hidden;background:var(--mist)}
+.sku .im img{width:100%;height:100%;object-fit:cover}
+.sku .ph{width:100%;height:100%;display:grid;place-content:center;text-align:center;font-size:12.5px;font-weight:700;line-height:1.25;padding:6px}
+.sku h4{font-size:15.5px}
+.sku .pr{font-size:17px;font-weight:700;color:var(--forest);margin-top:2px}
+.sku .pr s{font-size:12.5px;font-weight:500;color:var(--gray2);margin-left:4px}
+.sku .meta{font-size:13.5px;color:var(--gray);margin-top:2px;line-height:1.35}
+.sku .chip{margin-top:6px}
+.callout{border-left:4px solid var(--amber)}
+
+/* channels */
+.mtable{width:100%;border-collapse:separate;border-spacing:0;font-size:15px;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.mtable th,.mtable td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.mtable thead th{background:var(--forest);color:#fff;font-weight:500;font-size:14px}
+.mtable tbody tr:last-child td{border-bottom:0}
+.mtable td:first-child{font-weight:600;white-space:nowrap;color:var(--forest)}
+.mtable td{color:var(--gray)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px}
+.d-y{background:var(--mint)}.d-p{background:var(--amber)}.d-n{background:#c3d0c9}
+.scroll-x{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.rbar{display:grid;grid-template-columns:minmax(110px,160px) 1fr 76px;gap:12px;align-items:center;font-size:15px;margin:9px 0}
+.rbar .t{height:10px;background:var(--mist);border-radius:99px;overflow:hidden}
+.rbar .t i{display:block;height:100%;width:0;background:var(--amber);border-radius:99px;transition:width 1.2s cubic-bezier(.2,.7,.2,1) .2s}
+.rbar b{font-weight:600;text-align:right}
+.rev .stars{color:var(--amber);font-size:14px;letter-spacing:2px}
+.rev p{color:var(--ink)!important;font-weight:500;font-size:15.5px!important}
+.rev small{display:block;font-size:12px;color:var(--gray2);margin-top:6px}
+
+/* ads */
+.hbar{display:grid;grid-template-columns:minmax(110px,150px) 1fr 30px;gap:10px;align-items:center;font-size:14.5px;color:#cfe0d6;margin:7px 0}
+.hbar .t{height:10px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden}
+.hbar .t i{display:block;height:100%;width:0;background:var(--mint);border-radius:99px;transition:width 1.2s cubic-bezier(.2,.7,.2,1) .2s}
+.hbar.am .t i{background:var(--amber)}
+.hbar b{color:#fff;text-align:right;font-weight:600}
+.days{display:flex;align-items:flex-end;gap:5px;height:150px;margin-top:22px}
+.days div{flex:1;background:var(--mint);border-radius:5px 5px 0 0;position:relative;height:0;min-height:4px;transition:height 1.2s cubic-bezier(.2,.7,.2,1) .2s}
+.days div.hot{background:var(--amber)}
+.days div span{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);font-size:11px;font-weight:600;color:#fff;margin-bottom:2px}
+.dayl{display:flex;gap:5px;margin-top:6px}
+.dayl span{flex:1;font-size:9.5px;color:#8fa99b;text-align:center;white-space:nowrap;overflow:hidden}
+.vcard{display:flex;gap:12px;align-items:flex-start;padding:14px 16px!important}
+.vcard i{font-style:normal;flex-shrink:0;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-size:14px;font-weight:700}
+.vcard.good i{background:rgba(31,210,134,.16);color:var(--mint)}
+.vcard.bad i{background:rgba(251,176,0,.16);color:var(--amber)}
+.vcard h4{color:#fff;font-size:15.5px}
+.vcard p{font-size:14px!important;margin-top:2px!important}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 10px;align-items:center}
+.f{font:inherit;font-size:12.5px;font-weight:500;padding:6px 12px;border-radius:99px;border:1.5px solid rgba(255,255,255,.18);background:transparent;color:#cfe0d6;cursor:pointer;transition:all .2s}
+.f:hover{border-color:var(--mint);color:#fff}
+.f[aria-pressed="true"]{background:var(--mint);border-color:var(--mint);color:var(--forest);font-weight:600}
+.carousel{position:relative}
+.track{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(150px,10.4vw,176px);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:thin;scrollbar-color:#3d5a4c transparent}
+.ad{scroll-snap-align:start;background:#fff;color:var(--ink);border-radius:14px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:transform .25s}
+.ad:hover{transform:translateY(-3px)}
+.ad .im{aspect-ratio:9/11;background:#0d1712;display:flex;align-items:center;justify-content:center;position:relative}
+.ad .im img{width:100%;height:100%;object-fit:contain}
+.ad .im .fmt,.ad .im .rk{position:absolute;top:7px;font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:99px}
+.ad .im .fmt{left:7px;background:rgba(0,0,0,.65);color:#fff}
+.ad .im .rk{right:7px;background:var(--amber);color:var(--forest)}
+.ad .tx{padding:9px 11px 11px;display:flex;flex-direction:column;gap:5px;flex:1}
+.ad .tx h5{font-size:13.5px;font-weight:600;line-height:1.3}
+.ad .tx .chip{font-size:10.5px;padding:2px 7px;align-self:flex-start}
+.ad .tx .m{font-size:11px;color:var(--gray2);margin-top:auto}
+.cbtn{position:absolute;top:40%;width:40px;height:40px;border-radius:50%;border:0;background:var(--amber);color:var(--forest);cursor:pointer;display:grid;place-items:center;box-shadow:0 8px 18px -8px rgba(0,0,0,.5);z-index:2}
+.cbtn svg{width:18px;height:18px}
+.cbtn.prev{left:-14px}.cbtn.next{right:-14px}
+
+/* sites */
+.site{display:flex;flex-direction:column;gap:12px}
+.site .top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.site .top h3{font-size:20px}
+.site .top span{font-size:12px;color:var(--gray2)}
+.site .pic{border-radius:12px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/8}
+.site .pic img{width:100%;height:100%;object-fit:cover;object-position:top}
+.kv{display:flex;justify-content:space-between;gap:12px;font-size:14.5px;padding:6px 0;border-bottom:1px dashed var(--line)}
+.kv span{color:var(--gray);flex-shrink:0}
+.kv b{text-align:right;font-weight:600}
+.site .sub{font-size:13.5px;color:var(--gray);background:var(--mist);border-radius:10px;padding:9px 11px}
+.mid{display:flex;flex-direction:column;gap:14px}
+.donutwrap{display:flex;gap:18px;align-items:center}
+.donut{width:130px;height:130px;flex-shrink:0}
+.donut circle{fill:none;stroke-width:20}
+.donut .seg{transition:stroke-dashoffset 1.6s cubic-bezier(.2,.7,.2,1) .3s}
+.legend{display:grid;gap:8px;font-size:14px;color:var(--gray)}
+.legend div{display:flex;gap:8px;align-items:flex-start}
+.legend i{width:12px;height:12px;border-radius:4px;margin-top:4px;flex-shrink:0}
+.legend b{display:block;font-size:19px;color:var(--ink);letter-spacing:-.02em;line-height:1.1}
+.vs{display:grid;gap:10px;margin-top:4px}
+.vs .row{display:grid;grid-template-columns:92px 1fr;gap:10px;align-items:center}
+.vs .row>span{font-size:12.5px;font-weight:600}
+.vs .b{display:grid;grid-template-columns:1fr 56px;gap:8px;align-items:center;margin:2px 0}
+.vs .b .t{height:8px;border-radius:99px;background:var(--mist);overflow:hidden}
+.vs .b .t i{display:block;height:100%;width:0;border-radius:99px;transition:width 1.2s cubic-bezier(.2,.7,.2,1) .3s}
+.vs .b b{font-size:12.5px;text-align:right}
+.split{display:flex;height:34px;border-radius:10px;overflow:hidden;margin-top:10px}
+.split div{display:grid;place-items:center;color:#fff;font-size:13px;font-weight:600;width:0;transition:width 1.2s cubic-bezier(.2,.7,.2,1) .3s;white-space:nowrap;overflow:hidden}
+.gbar{display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:center;margin:8px 0}
+.gbar>span{font-size:13.5px;color:var(--gray);font-weight:500}
+.gbar .pair{display:grid;gap:3px}
+.gbar .b{display:grid;grid-template-columns:1fr 46px;gap:6px;align-items:center}
+.gbar .t{height:9px;border-radius:99px;background:var(--mist);overflow:hidden}
+.gbar .t i{display:block;height:100%;width:0;border-radius:99px;transition:width 1.2s cubic-bezier(.2,.7,.2,1) .3s}
+.gbar b{font-size:11.5px;text-align:right;font-weight:600}
+.line svg{width:100%;height:auto;max-height:230px;overflow:visible}
+.line .p1,.line .p2{fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.line .p1{stroke:var(--forest)}.line .p2{stroke:var(--box)}
+.line text{font:500 12px Poppins,sans-serif;fill:var(--gray)}
+.line .lab{font-weight:700;font-size:13px}
+.bench .bb{display:grid;grid-template-columns:170px 1fr 60px;gap:10px;align-items:center;font-size:14px;margin:7px 0}
+.bench .bb .t{height:14px;border-radius:6px;background:var(--mist);overflow:hidden}
+.bench .bb .t i{display:block;height:100%;width:0;border-radius:6px;background:#b7c5bd;transition:width 1.2s cubic-bezier(.2,.7,.2,1) .3s}
+.bench .bb.us .t i{background:var(--forest)}
+.bench .bb.us2 .t i{background:var(--box)}
+.bench .bb.all{font-weight:700}
+.bench .bb.all .t i{background:linear-gradient(90deg,var(--forest),var(--mint))}
+.bench .bb b{text-align:right}
+.hint .stat{font-size:28px}
+.why i{font-style:normal;flex-shrink:0;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-size:13px;font-weight:700;background:var(--mintsoft);color:var(--forest)}
+.why .card{display:flex;gap:12px;align-items:flex-start}
+.costc{border-top:4px solid var(--red)}
+.door{display:flex;flex-direction:column;gap:6px}
+.door b.n{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--mint);color:var(--forest);font-size:14px;margin-bottom:4px}
+.doors-map{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center}
+.doors-map .col{display:grid;gap:8px}
+.doors-map .pill{padding:10px 14px;border-radius:12px;font-size:13.5px;font-weight:600;background:rgba(255,255,255,.07);color:#e0ece6;border:1px solid rgba(255,255,255,.1)}
+.doors-map .store{background:var(--mint);color:var(--forest);border-radius:16px;padding:18px 20px;text-align:center;font-weight:700}
+.doors-map .store small{display:block;font-weight:500;font-size:12px;margin-top:2px}
+.doors-map svg{width:70px;height:160px}
+.doors-map svg path{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-dasharray:5 6}
+.dl{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+
+/* competitors */
+.pmap{position:relative;height:100%;min-height:360px;border-radius:var(--r);background:var(--g-card);border:1px solid var(--line);padding:18px 18px 34px 46px}
+.pmap .plot{position:relative;height:100%;border-left:1.5px solid var(--line);border-bottom:1.5px solid var(--line)}
+.pmap .grid-y{position:absolute;left:0;right:0;border-top:1px dashed #e6ede8}
+.pmap .ylab{position:absolute;left:-40px;transform:translateY(-50%) rotate(-90deg);transform-origin:center;font-size:11px;color:var(--gray2);white-space:nowrap;width:0;display:flex;justify-content:center}
+.pmap .yl{position:absolute;left:8px;font-size:11.5px;color:var(--gray2);transform:translateY(-120%)}
+.pmap .xl{position:absolute;bottom:-24px;transform:translateX(-50%);font-size:11.5px;color:var(--gray2);white-space:nowrap}
+.pmap .zone{position:absolute;border-radius:16px;font-size:11.5px;font-weight:600;padding:6px 10px}
+.bub{position:absolute;--tx:calc(var(--sz,16px) / -2);transform:translate(var(--tx),-50%) scale(0);transform-origin:calc(var(--sz,16px) / 2) 50%;transition:transform .6s cubic-bezier(.3,1.5,.5,1);transition-delay:var(--bd,0s);display:flex;align-items:center;gap:6px;white-space:nowrap;z-index:2}
+.in .bub{transform:translate(var(--tx),-50%) scale(1)}
+.bub.l{--tx:calc(-100% + var(--sz,16px) / 2);transform-origin:calc(100% - var(--sz,16px) / 2) 50%}
+.bub i{width:var(--sz,16px);height:var(--sz,16px);border-radius:50%;flex-shrink:0;box-shadow:0 4px 10px -4px rgba(0,0,0,.35)}
+.bub span{font-size:12.5px;font-weight:600;color:var(--ink);background:rgba(255,255,255,.85);padding:1px 6px;border-radius:6px}
+.bub.l span{order:-1}
+.bub.hollow i{background:#fff!important;border:2.5px dashed var(--teal)}
+.bub.us i{box-shadow:0 0 0 6px rgba(31,210,134,.25),0 0 0 12px rgba(31,210,134,.1)}
+.bub.us span{background:var(--forest);color:#fff}
+.k-lab{background:#9aa9a1}.k-sci{background:var(--box)}.k-d2c{background:var(--amber)}.k-sova{background:var(--mint)}
+.cgroup{display:flex;flex-direction:column;gap:6px}
+.cgroup .hd{display:flex;align-items:center;gap:8px}
+.cgroup .hd i{width:12px;height:12px;border-radius:50%}
+.cgroup .names{display:flex;flex-wrap:wrap;gap:5px;margin-top:2px}
+.cgroup .names span{font-size:12px;font-weight:600;background:#fff;border:1px solid var(--line);border-radius:99px;padding:2px 9px;color:var(--ink)}
+.cgroup p{font-size:13px!important;margin-top:0!important;line-height:1.45!important}
+.cgroup{padding:13px 16px!important}
+.ctab{width:100%;border-collapse:separate;border-spacing:0;font-size:13.5px;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.ctab th,.ctab td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;color:var(--gray)}
+.ctab thead th{background:var(--forest);color:#fff;font-weight:500;font-size:12.5px}
+.ctab tbody tr:last-child td{border-bottom:0}
+.ctab td:first-child{font-weight:600;color:var(--ink);white-space:nowrap}
+.ctab td:first-child small{display:block;font-weight:500;color:var(--gray2);font-size:11.5px}
+.ctab tr.sova td{background:#eefbf4;color:var(--ink)}
+.ctab tr.sova td:first-child{color:var(--forest)}
+.ctab .y{color:#0d6a42;font-weight:600}.ctab .n{color:#a0aca6}
+.moat{position:relative;overflow:hidden}
+.moat .big{font-size:30px;font-weight:700;letter-spacing:-.03em;color:var(--forest);line-height:1}
+.moat::after{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;background:radial-gradient(closest-side,rgba(31,210,134,.22),transparent)}
+.threat{border-top:4px solid var(--red)}
+.threat .who{font-size:12px;font-weight:700;color:var(--red)}
+.answer{border-top:4px solid var(--mint)}
+.answer .who{font-size:12px;font-weight:700;color:#0d6a42}
+@media (max-width:960px){.pmap{height:420px}.compgrid{grid-template-columns:1fr!important}}
+@media (max-width:640px){.pmap{min-width:720px;height:420px}.mapwrap{margin:0 -20px;padding:0 20px}
+  .ctab{border:0;background:transparent}.ctab thead{display:none}
+  .ctab tr{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:10px}
+  .ctab tr.sova{background:#eefbf4}.ctab tr.sova td{background:transparent}
+  .ctab td{display:block;border:0!important;padding:3px 0!important;white-space:normal!important}
+  .ctab td:first-child{font-size:15px;padding-bottom:6px!important}
+  .ctab td[data-l]:not(:first-child)::before{content:attr(data-l);display:block;font-size:11.5px;font-weight:600;color:var(--gray2)}}
+
+/* problems */
+.prob{display:flex;flex-direction:column;gap:8px}
+.prob .tag{font-size:12px;font-weight:700;color:var(--red)}
+.prob .ev{background:var(--mist);border-radius:10px;padding:9px 12px;font-size:14px;color:var(--ink)}
+.prob .cost{font-size:14px;border-top:1.5px dashed var(--line);padding-top:8px;margin-top:auto;color:var(--gray)}
+.prob .cost b{color:var(--red)}
+.fog{display:flex;flex-wrap:wrap;gap:6px}
+.fog span{font-size:13px;font-weight:700;padding:3px 10px;border-radius:99px;background:var(--boxsoft);color:var(--box)}
+
+/* plan */
+.ktabs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+.kt{font:inherit;text-align:left;padding:11px 14px;border-radius:14px;border:1.5px solid var(--line);background:#fff;cursor:pointer;transition:all .25s;display:flex;flex-direction:column;gap:2px}
+.kt b{font-size:11.5px;color:var(--gray2);font-weight:600}
+.kt span{font-size:16px;font-weight:600;color:var(--forest);line-height:1.2}
+.kt:hover{border-color:var(--forest)}
+.kt[aria-selected="true"]{background:var(--forest);border-color:var(--forest)}
+.kt[aria-selected="true"] b{color:var(--mint)}
+.kt[aria-selected="true"] span{color:#fff}
+.kp{margin-top:12px;border:1px solid var(--line);border-radius:20px;padding:clamp(18px,1.8vw,28px);background:var(--g-card);animation:fade .4s ease}
+.kp[hidden]{display:none}
+.kp .top{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,330px);gap:28px;align-items:start}
+.kp h3{font-size:clamp(20px,1.8vw,28px)}
+.jd{font-size:15px;color:var(--gray);border-left:3px solid var(--mint);padding-left:12px;margin-top:10px;font-style:italic}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.kpi h4{margin-bottom:6px;font-size:13.5px}
+.kpi ul{list-style:none;display:grid;gap:5px}
+.kpi li{font-size:14px;color:var(--gray);padding-left:16px;position:relative}
+.kpi li::before{content:"";position:absolute;left:0;top:7px;width:8px;height:8px;border-radius:2px;background:var(--amber)}
+.ladder{margin-top:18px;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;align-items:end}
+.rung{border-radius:12px 12px 6px 6px;padding:12px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;gap:3px;transform-origin:bottom;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .ladder .rung{transform:scaleY(.2)}
+.js .in .ladder .rung{transform:none}
+.rung small{font-size:11px;opacity:.8}
+.rung b{font-size:18px;font-weight:700;line-height:1}
+.rung span{font-size:12px;line-height:1.3;opacity:.92}
+.mini{margin-top:14px}
+.mini .card{background:#fff;padding:14px 16px}
+.mini h4{font-size:15.5px}
+.mini p{font-size:14px!important}
+.flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:18px}
+.step{padding:12px;border-radius:12px;background:#fff;border:1px solid var(--line);border-top:4px solid var(--forest)}
+.step.slow{border-top-color:var(--amber)}
+.step b{font-size:11.5px;color:var(--gray2)}
+.step h4{font-size:14px;margin:2px 0}
+.step p{font-size:13.5px;color:var(--gray)}
+.gate{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:18px}
+.gate div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}
+.gate b{font-size:11.5px;color:var(--gray2)}
+.gate h4{font-size:14px;margin:2px 0}
+.gate p{font-size:13.5px;color:var(--gray)}
+.bridge{display:flex;align-items:flex-end;gap:10px;height:150px;margin-top:28px;border-bottom:1.5px solid var(--line)}
+.bridge div{flex:1;position:relative;border-radius:6px 6px 0 0}
+.bridge div span{position:absolute;bottom:calc(100% + 4px);left:0;right:0;text-align:center;font-size:12.5px;font-weight:700}
+.bridgel{display:flex;gap:10px;margin-top:6px}
+.bridgel span{flex:1;font-size:11.5px;color:var(--gray);text-align:center}
+.say div{border-radius:14px;padding:14px 16px}
+.say .yes{background:var(--mintsoft)}.say .no{background:var(--redsoft)}
+.say p{font-size:13px;margin-top:4px}
+.per .q{font-size:13px;font-weight:600;color:var(--forest);margin-top:6px}
+
+/* npd */
+.idea{display:flex;flex-direction:column;gap:6px;position:relative;overflow:hidden}
+.idea::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px}
+.idea.t::before{background:var(--box)}.idea.s::before{background:var(--mint)}
+.idea .chip{align-self:flex-start}
+.idea h3{font-size:16px}
+.idea dl{display:flex;gap:16px;font-size:13.5px;margin-top:auto;padding-top:8px;border-top:1.5px dashed var(--line)}
+.idea dt{color:var(--gray2)}
+.idea dd{font-weight:600}
+
+/* roadmap */
+.phase .when{font-size:12.5px;color:var(--mint);font-weight:600}
+.phase h3{margin:2px 0 8px}
+.phase .items{display:grid;gap:6px}
+.phase .items span{font-size:14.5px;color:#d5e4dc;background:rgba(255,255,255,.05);border-radius:10px;padding:8px 11px}
+.score .dcard h4{font-size:14px}
+.score .dcard .ans{font-size:14px;color:#d5e4dc;margin-top:6px}
+.score .dcard .mb{font-size:12px;color:var(--mint);margin-top:6px}
+
+/* me */
+.me{display:grid;grid-template-columns:minmax(220px,300px) minmax(0,1fr);gap:clamp(24px,3.5vw,56px);align-items:center}
+.me .photo{border-radius:20px;max-height:72vh;overflow:hidden;aspect-ratio:4/5;position:relative}
+.me .photo img{width:100%;height:100%;object-fit:cover}
+.me .photo::after{content:"";position:absolute;inset:auto -20% -30% -20%;height:50%;background:radial-gradient(closest-side,rgba(31,210,134,.35),transparent);pointer-events:none}
+.me h2{max-width:none}
+.me .body{font-size:16px;color:var(--gray);margin-top:10px;max-width:80ch}
+.fitc h4{font-size:14px}
+.fitc p{font-size:14px!important}
+.work{display:flex;flex-wrap:wrap;gap:6px}
+.work a{font-size:12.5px;font-weight:500;padding:6px 12px;border-radius:99px;border:1.5px solid var(--line);text-decoration:none;color:var(--gray);transition:all .2s}
+.work a:hover{background:var(--forest);color:#fff;border-color:var(--forest)}
+.contact{display:flex;flex-wrap:wrap;gap:8px}
+
+.sources{columns:3;column-gap:32px;margin-top:14px;font-size:13px}
+.sources li{break-inside:avoid;margin:0 0 6px 18px;color:var(--gray)}
+footer{padding:26px 0;background:var(--forest);color:#9db6a9;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer img{height:22px;width:auto}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.js .rv{opacity:1;transform:none}.js .ladder .rung{transform:none}}
+
+@media (max-width:1180px){
+  .brand span{display:none}
+  .g5{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .g4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ktabs{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .tline .g7{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .tline svg{display:none}
+  .flow{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .gate{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:960px){
+  .screen{padding:48px 0}
+  .menu{display:none;position:absolute;top:var(--nav);left:0;right:0;background:#fff;flex-direction:column;padding:10px 20px 16px;border-bottom:1px solid var(--line);box-shadow:0 20px 30px -20px rgba(0,0,0,.3)}
+  .menu.open{display:flex}
+  .menu a{font-size:16px;padding:12px 14px}
+  .menu-btn{display:block}
+  .head,.hero .grid,.kp .top,.me,.doors-map{grid-template-columns:1fr}
+  .hero{height:auto}.hero .pin{position:static;height:auto;padding:40px 0}
+  .stage{min-height:640px}
+  .scene{--s:.8}
+  .sitegrid,.shelfgrid{grid-template-columns:1fr!important}
+  .kit{margin:0 auto;max-width:280px}
+  .g3,.g2{grid-template-columns:1fr}
+  .ladder{grid-template-columns:repeat(2,1fr)}
+  .rung{min-height:0!important}
+  .me .photo{max-width:240px}
+  .doors-map svg{display:none}
+  .sources{columns:1}
+  .curve{width:80vw}
+}
+@media (max-width:640px){
+  .g4,.g5,.ktabs,.flow,.gate,.tline .g7{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat{font-size:26px}
+  .skus{grid-template-columns:1fr}
+  .hbar{grid-template-columns:96px 1fr 26px}
+  .bench .bb{grid-template-columns:110px 1fr 50px}
+  .mtable{border:0;background:transparent}
+  .mtable thead{display:none}
+  .mtable tr{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:10px}
+  .mtable td{display:block;border:0!important;padding:3px 0!important;white-space:normal!important}
+  .mtable td:first-child{font-size:15px;padding-bottom:6px!important}
+  .mtable td[data-l]:not(:first-child)::before{content:attr(data-l);display:block;font-size:11.5px;font-weight:600;color:var(--gray2)}
+  .cbtn{display:none}
+}
+/* v7: plan first */
+a.bet{text-decoration:none;color:inherit}
+.bets .bet{min-height:0;gap:4px;padding:18px 20px}
+.bets .bet .n{font-size:34px}
+.bets .bet h4{margin:2px 0 4px;font-size:18px}
+.bet .lb{font-size:12px;font-weight:700;color:var(--forest);margin-top:4px}
+.bets .bet p{font-size:14.5px;margin:0;line-height:1.45}
+.bet .w{margin-top:auto;padding-top:10px;border-top:1.5px dashed rgba(32,49,41,.14);font-size:14px;font-weight:600;color:var(--forest);line-height:1.35}
+.bet:nth-child(6){background:linear-gradient(160deg,#fde9e3 0%,#fff 70%)}
+.lede.jd{font-style:italic;border-left:3px solid var(--mint);padding-left:14px;font-size:clamp(15px,1.05vw,17px)}
+.src{display:block;font-size:11.5px;color:#7f9a8c;margin-top:6px;font-style:normal}
+.card .src{color:var(--gray2)}
+/* KRA 1 */
+.penwrap{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
+.penwrap .ladder{margin-top:14px}
+.penwrap .rung{padding:10px}
+.penwrap .rung b{font-size:16px}
+.acts{gap:12px}
+.acts .card{padding:16px 18px}
+.acts p{font-size:14.5px!important}
+/* KRA 2 pharmacies */
+.shelf{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:10px 0 4px}
+.shelf div{display:flex;flex-direction:column;gap:2px;font-size:12px;line-height:1.25}
+.shelf img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;background:var(--mist);margin-bottom:4px}
+.shelf b{font-size:12.5px}.shelf span{color:var(--gray)}
+.phases{display:grid;gap:10px;margin-top:10px;position:relative}
+.phases>div{background:#fff;border:1px solid var(--line);border-left:4px solid var(--mint);border-radius:12px;padding:12px 14px}
+.phases>div:nth-child(2){border-left-color:var(--amber)}.phases>div:nth-child(3){border-left-color:var(--box)}
+.phases b{font-size:12px;color:var(--gray2)}
+.phases h4{font-size:16px;margin:2px 0 4px}
+.phases p{font-size:14px!important;margin:0!important}
+.phases i{display:block;font-size:13px;font-style:normal;font-weight:600;color:var(--forest);margin-top:6px}
+.scen td{text-align:center;font-weight:600}
+.scen td:first-child{text-align:left;font-weight:500;color:var(--gray)}
+.scen tr:last-child td{color:var(--forest);font-size:17px}
+.rto{border-top:4px solid var(--amber)}
+.rto p b{color:var(--ink)}
+/* KRA 2 partners */
+.partners .card{display:flex;flex-direction:column;gap:6px}
+.partners .chip{align-self:flex-start}
+.partners dl{display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:13.5px;margin-top:auto;padding-top:10px;border-top:1.5px dashed var(--line)}
+.partners dt{color:var(--gray2);font-size:12px}
+.partners dd{font-weight:600;color:var(--forest)}
+.prec{margin-top:14px}
+.prec .card{padding:14px 18px;background:var(--forest);border:0}
+.prec b{color:var(--mint);font-size:15px}
+.prec p{color:#c7d9cf!important;font-size:14px!important;margin-top:4px!important}
+/* KRA 3 ideas */
+.npd{gap:12px}
+.npd .idea{padding:14px 16px;gap:5px}
+.npd .idea h3{font-size:16px}
+.npd .idea p{font-size:13.5px;margin-top:0;line-height:1.45}
+.npd .idea dl{gap:12px;font-size:12.5px;flex-wrap:wrap}
+.npd .idea dt{font-size:11.5px}
+.mock{height:116px;border-radius:12px;margin:-2px -4px 4px;background:radial-gradient(circle at 50% 60%,color-mix(in srgb,var(--mc,#1fd286) 22%,#fff) 0%,#f6f9f7 75%);display:grid;place-items:center;overflow:hidden}
+.mock svg{height:100%;width:auto}
+.mock .mt{font:700 9px Poppins,sans-serif;fill:#203129}
+.mock .ms{font:500 7px Poppins,sans-serif;fill:#66756d}
+.mock .dk{fill:#203129}
+/* KRA 4 */
+.leaks{list-style:none;display:grid;gap:8px;margin-top:8px}
+.leaks li{font-size:14.5px;color:var(--gray);padding-left:18px;position:relative;line-height:1.45}
+.leaks li::before{content:"";position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:3px;background:var(--red)}
+.leaks.fix li::before{background:var(--mint)}
+.leaks b{color:var(--ink);font-weight:600}
+.leaks.dk li{color:#a9c1b4}.leaks.dk b{color:#fff}.leaks.dk li::before{background:var(--amber)}
+#k-eff .flow{margin-top:12px}
+#k-eff .ctable{font-size:14px}
+#k-eff .ctable td:first-child{color:var(--gray);padding-right:8px}
+/* KRA 5 */
+.mktwrap{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);align-items:start}
+.mktwrap .g2 .card{padding:14px 16px}
+.mktwrap .g2 p{font-size:14px!important}
+.wal{list-style:none;margin-top:12px;display:grid;gap:0;position:relative}
+.wal::before{content:"";position:absolute;left:43px;top:8px;bottom:8px;width:2px;background:repeating-linear-gradient(var(--mint) 0 6px,transparent 6px 11px)}
+.wal li{display:grid;grid-template-columns:62px 1fr;gap:12px;align-items:center;padding:5px 0;position:relative}
+.wal li b{font-size:12px;font-weight:700;color:var(--forest);background:var(--mintsoft);border-radius:99px;padding:3px 0;text-align:center;position:relative;z-index:1}
+.wal li span{font-size:14px;background:#dcf8c6;color:#1b2a22;border-radius:4px 12px 12px 12px;padding:7px 11px;box-shadow:0 1px 0 rgba(0,0,0,.06);justify-self:start}
+/* KRA 6 waterfall */
+.pnlwrap{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);align-items:start}
+.wf{display:grid;gap:6px;margin-top:2px}
+.wr{display:grid;grid-template-columns:minmax(170px,230px) 1fr 74px;gap:12px;align-items:center;font-size:14px;color:#c7d9cf}
+.wr.wt{color:#fff;font-weight:600}
+.wr.wt span{font-weight:600}
+.wtk{position:relative;height:20px}
+.wtk .z{position:absolute;top:-3px;bottom:-3px;width:1.5px;background:rgba(255,255,255,.25)}
+.wtk b{position:absolute;top:2px;height:16px;border-radius:4px;transform:scaleX(0);transform-origin:left;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.in .wtk b{transform:none}
+.wr:nth-child(n) .wtk b{transition-delay:calc(var(--i,0) * 1s)}
+.wtk b.tot{background:var(--mint)}.wtk b.tn{background:#e07a5f}.wtk b.neg{background:#c8492f;opacity:.85}.wtk b.pos{background:var(--amber)}
+.wr em{font-style:normal;text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+.wr em.neg{color:#f0a08a}.wr em.pos{color:var(--amber)}.wr em.tot{color:var(--mint)}.wr em.tn{color:#f0a08a}
+/* problems proof */
+.pbtn{font:inherit;font-size:13.5px;font-weight:600;align-self:flex-start;margin-top:8px;padding:7px 14px;border-radius:99px;border:1.5px solid var(--forest);background:#fff;color:var(--forest);cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:all .2s}
+.pbtn::before{content:"";width:14px;height:11px;border:2px solid currentColor;border-radius:3px;box-sizing:border-box;background:radial-gradient(circle at 50% 55%,currentColor 0 2px,transparent 2.5px)}
+.pbtn:hover{background:var(--forest);color:#fff}
+.prob .ev small{display:block;font-size:12.5px;color:var(--gray);margin-top:4px}
+.proofrow{margin-top:10px}
+.mapcol{display:flex;flex-direction:column}
+.mapcol .mapwrap{flex:1;display:flex}
+.mapcol .pmap{flex:1}
+.proofdlg{margin:auto;border:0;border-radius:20px;padding:22px 24px;width:min(1180px,94vw);max-height:90vh;overflow:auto;background:#fff;color:var(--ink);box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.proofdlg::backdrop{background:rgba(16,26,21,.72);backdrop-filter:blur(3px)}
+.phd{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:14px}
+.phd h3{font-size:22px}
+.px{font:inherit;font-size:26px;line-height:1;width:40px;height:40px;border-radius:50%;border:0;background:var(--mist);cursor:pointer;color:var(--forest)}
+.pimgs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.pimgs figure{display:flex;flex-direction:column;gap:6px}
+.pimgs img{width:100%;border-radius:12px;border:1px solid var(--line);background:var(--mist)}
+.pimgs figcaption{font-size:13.5px;color:var(--gray);line-height:1.4}
+/* comp3 */
+.thr{display:grid;gap:10px;align-content:start}
+.payoff{background:var(--mist);border-style:dashed;font-size:14px;color:var(--gray);padding:12px 16px!important}
+.payoff b{color:var(--forest)}
+@media (max-width:1180px){.npd{grid-template-columns:repeat(3,minmax(0,1fr))}.shelf{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:960px){.penwrap,.mktwrap,.pnlwrap{grid-template-columns:1fr}.npd{grid-template-columns:repeat(2,minmax(0,1fr))}.wr{grid-template-columns:120px 1fr 64px;font-size:13px}}
+@media (max-width:640px){.acts,.mktwrap .g2{grid-template-columns:1fr}.npd{grid-template-columns:1fr 1fr}.pimgs{grid-template-columns:1fr}.proofdlg{padding:16px}.partners dl{grid-template-columns:1fr}.shelf{grid-template-columns:repeat(4,minmax(0,1fr))}.wr{grid-template-columns:96px 1fr 58px;gap:8px;font-size:12px}}
+
+#comp3 .g3{grid-template-rows:auto auto auto}
+.thr{grid-row:span 3;grid-template-rows:subgrid}
+@media (max-width:960px){.thr{grid-row:auto;grid-template-rows:none}}
+.pimgs figcaption a{color:var(--forest);font-weight:600}
+/* v8: shorter structure */
+.glance{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.gl{display:flex;gap:16px;align-items:flex-start;text-decoration:none;color:inherit;padding:16px 18px;border-radius:16px;border:1px solid var(--line);background:linear-gradient(160deg,#eef8f2 0%,#fff 75%);transition:transform .25s,box-shadow .25s}
+.gl:nth-child(2){background:linear-gradient(160deg,#efecfa 0%,#fff 75%)}.gl:nth-child(3){background:linear-gradient(160deg,#fdeee8 0%,#fff 75%)}
+.gl:nth-child(4){background:linear-gradient(160deg,#fff4da 0%,#fff 75%)}.gl:nth-child(5){background:linear-gradient(160deg,#e3f2ef 0%,#fff 75%)}.gl:nth-child(6){background:linear-gradient(160deg,#eef2ef 0%,#fff 75%)}
+.gl:hover{transform:translateY(-3px);box-shadow:0 16px 28px -22px rgba(32,49,41,.5)}
+.gl>b{font-size:30px;font-weight:700;line-height:1;background:linear-gradient(135deg,var(--forest),var(--mint));-webkit-background-clip:text;background-clip:text;color:transparent;flex-shrink:0}
+.gl h4{font-size:17px}
+.gl p{font-size:14px;color:var(--gray);margin-top:3px;line-height:1.4}
+.gl span{display:inline-block;margin-top:8px;font-size:12.5px;font-weight:600;color:var(--forest);background:#fff;border:1px solid var(--line);border-radius:99px;padding:3px 10px}
+.snap{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1px;margin-top:14px;background:rgba(255,255,255,.08);border-radius:var(--r);overflow:hidden;background:var(--forest)}
+.snap div{padding:14px 16px;display:flex;flex-direction:column;gap:3px;border-right:1px solid rgba(255,255,255,.08)}
+.snap div:last-child{border:0}
+.snap b{color:var(--mint);font-size:18px;font-weight:600;letter-spacing:-.02em}
+.snap span{color:#c7d9cf;font-size:13px;line-height:1.4}
+.moatrow{margin-top:16px;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.moats{gap:10px}
+.moats .moat{padding:12px 16px}
+.moats .moat .big{font-size:22px}
+.moats .moat p{font-size:13.5px!important;margin-top:4px!important}
+.borrow{display:grid;gap:10px}
+.borrow .card{padding:11px 16px;display:grid;grid-template-columns:96px 1fr;column-gap:12px;align-items:baseline}
+.borrow .who{font-size:12.5px;font-weight:700;color:var(--box);grid-row:span 2}
+.borrow p{font-size:13.5px!important;margin:0!important}
+.borrow b{font-size:13.5px;color:#0d6a42;font-weight:600}
+.acts .hl{background:var(--forest);border:0}.acts .hl h4{color:var(--mint);font-size:20px}.acts .hl p{color:#c7d9cf!important}
+.chan{align-items:start}
+.chan>.card>p{font-size:14.5px!important}
+.steps3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.steps3 div{background:#fff;border:1px solid var(--line);border-top:4px solid var(--mint);border-radius:10px;padding:9px 11px;display:flex;flex-direction:column;gap:2px}
+.steps3 div:nth-child(2){border-top-color:var(--amber)}.steps3 div:nth-child(3){border-top-color:var(--box)}
+.steps3 b{font-size:14px}.steps3 span{font-size:12.5px;color:var(--gray);line-height:1.35}
+.kv2{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:10px;padding:10px 14px;border-radius:12px;background:var(--mintsoft);font-size:14px;color:var(--gray)}
+.kv2 b{color:var(--forest);font-size:16px;white-space:nowrap}
+.plist{display:grid;gap:0;margin-top:8px}
+.plist div{display:grid;grid-template-columns:minmax(150px,190px) 1fr;column-gap:14px;padding:8px 0;border-bottom:1px dashed var(--line)}
+.plist div:last-child{border:0}
+.plist b{font-size:14.5px;grid-row:span 2}
+.plist b i{display:inline-block;font-style:normal;font-size:11px;font-weight:600;background:var(--ambersoft);color:#765300;border-radius:99px;padding:1px 7px;margin-left:4px;vertical-align:middle}
+.plist span{font-size:13.5px;color:var(--gray);line-height:1.4}
+.plist em{font-style:normal;font-size:12.5px;font-weight:600;color:var(--forest)}
+.npc-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.npc{display:grid;grid-template-columns:76px 1fr;gap:12px;align-items:start;background:var(--g-card);border:1px solid var(--line);border-left:4px solid var(--mint);border-radius:14px;padding:12px}
+.npc.t{border-left-color:var(--box)}
+.npc .mock{height:76px;margin:0;border-radius:10px}
+.npc h4{font-size:14.5px;line-height:1.25}
+.npc h4 i{display:inline-block;font-style:normal;font-size:10.5px;font-weight:600;background:var(--ambersoft);color:#765300;border-radius:99px;padding:1px 6px;vertical-align:middle}
+.npc p{font-size:12.5px;color:var(--gray);margin-top:3px;line-height:1.4}
+.npc em{display:block;font-style:normal;font-size:12px;font-weight:600;color:var(--forest);margin-top:5px;line-height:1.35}
+.pairs{display:grid;gap:8px;margin-top:8px}
+.pairs div{display:grid;grid-template-columns:130px 1fr;gap:12px;font-size:14px;align-items:baseline}
+.pairs span{color:var(--red);font-weight:600;font-size:13.5px}
+.pairs b{font-weight:500;color:var(--ink)}
+@media (max-width:1280px){.npc-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.snap{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:960px){.glance,.moatrow{grid-template-columns:1fr}.npc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.npc-grid,.steps3{grid-template-columns:1fr}.snap{grid-template-columns:1fr 1fr}.plist div,.pairs div,.borrow .card{grid-template-columns:1fr}.kv2{flex-direction:column;align-items:flex-start}}
+/* v9 */
+.ktabs5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.ppanel{margin-top:16px;animation:fade .4s ease}
+.ppanel[hidden]{display:none}
+.ptop{display:flex;gap:18px;align-items:baseline;flex-wrap:wrap;margin-bottom:12px}
+.ptop h3{font-size:clamp(20px,1.7vw,26px)}
+.ptop p{font-size:15px;color:var(--gray);max-width:none}
+.adtop{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:14px}
+.adstats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.adstats .dcard{padding:12px 14px}
+.adstats .stat{font-size:28px}
+.adstats p{font-size:13px!important;margin-top:4px!important}
+.adtop .hbar{margin:5px 0;font-size:13.5px}
+.adwork{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:12px}
+.adwork div{border-radius:12px;padding:10px 12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:3px}
+.adwork b{font-size:12px;font-weight:700}
+.adwork .good b{color:var(--mint)}.adwork .bad b{color:var(--amber)}
+.adwork span{font-size:13px;color:#d0e0d7;line-height:1.4}
+#ads .filters{margin:12px 0 8px}
+.sitesg{align-items:stretch}
+.ctable.st td{text-align:left!important;padding:7px 6px 7px 0;font-weight:500;font-size:14px;white-space:normal}
+.ctable.st tr:first-child td{font-weight:700;color:var(--forest);font-size:13px}
+.ctable.st td:first-child{color:var(--gray);font-weight:500}
+.ctable.st td:nth-child(2){color:var(--forest);font-weight:600}
+.ctable.st td:nth-child(3){color:var(--box);font-weight:600}
+.sitesg .line svg{max-height:250px}
+.lightsnap{background:var(--forest)}
+#comp .ctab td{padding:8px 10px;font-size:13px}
+#comp .pmap{min-height:330px}
+@media (max-width:1180px){.ktabs5{grid-template-columns:repeat(3,minmax(0,1fr))}.adtop{grid-template-columns:1fr 1fr}.adstats{grid-column:span 2;grid-template-columns:repeat(4,1fr)}.adwork{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:960px){.adtop{grid-template-columns:1fr}.adstats{grid-column:auto;grid-template-columns:1fr 1fr}.adwork{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.ktabs5{grid-template-columns:1fr 1fr}.adwork{grid-template-columns:1fr}}
+#ads .ad .im{aspect-ratio:9/10}
+#ads .head{margin-bottom:18px}
+#ads .track{grid-auto-columns:clamp(140px,9.4vw,160px)}
+#ads .adwork{margin-top:10px}
+.adstats .stat{font-size:24px}
+/* v10: colour, elements, spacing */
+:root{--line:#dcebe2;--mist:#eef7f1}
+.screen.light{background:radial-gradient(900px 420px at 100% 0%,rgba(31,210,134,.07),transparent 70%),radial-gradient(700px 380px at 0% 100%,rgba(31,210,134,.05),transparent 70%),#fff}
+.screen.mist{background:radial-gradient(900px 460px at 0% 0%,rgba(31,210,134,.10),transparent 70%),linear-gradient(180deg,#eef8f2 0%,#f4faf6 100%)}
+.eyebrow{background:var(--mintsoft);color:var(--forest);padding:4px 14px 4px 4px;border-radius:99px}
+.dark .eyebrow{background:rgba(31,210,134,.12);color:#c7e9d7}
+.sq{display:block;width:96px;height:12px;margin-top:12px}
+.sq path{fill:none;stroke:var(--mint);stroke-width:3;stroke-linecap:round;stroke-dasharray:140;stroke-dashoffset:140;transition:stroke-dashoffset 1.2s cubic-bezier(.65,0,.35,1) .35s}
+.in .sq path{stroke-dashoffset:0}
+.card{transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{border-color:#bfe3cf;box-shadow:0 18px 32px -26px rgba(15,94,83,.55)}
+/* plan */
+.gl{align-items:center}
+.gl .gi,.mstat .sico{flex-shrink:0;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--forest);color:var(--mint)}
+.gl .gi svg,.mstat .sico svg{width:22px;height:22px}
+.gl small{font-size:12px;font-weight:700;color:var(--mint);letter-spacing:.02em;filter:brightness(.8)}
+.mstat{position:relative}
+.mstat .sico{position:absolute;right:16px;top:16px;width:40px;height:40px;border-radius:12px;background:var(--mintsoft);color:var(--forest)}
+/* problems */
+.pcs{gap:14px}
+.pc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.pc::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--c)}
+.pc:hover{transform:translateY(-3px);box-shadow:0 18px 30px -24px rgba(0,0,0,.4)}
+.pch{display:flex;align-items:center;gap:10px}
+.pico{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:var(--cs);color:var(--c)}
+.pico svg{width:19px;height:19px}
+.ptag{font-size:12.5px;font-weight:700;color:var(--c)}
+.pc .pbtn{margin:0 0 0 auto;padding:5px 12px;font-size:12.5px;border-color:var(--line);color:var(--forest)}
+.pc .pbtn:hover{background:var(--forest);border-color:var(--forest);color:#fff}
+.pc h3{font-size:18px}
+.pc p{font-size:14.5px;color:var(--gray);line-height:1.5}
+.pc .fog span{background:var(--cs);color:var(--c)}
+.twins{display:grid;grid-template-columns:62px 18px 62px 1fr;gap:8px;align-items:center}
+.twins figure{display:flex;flex-direction:column;gap:3px;align-items:center}
+.twins img{width:62px;height:62px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
+.twins figcaption{font-size:12px;font-weight:700;color:var(--box)}
+.twins>b{font-size:20px;color:var(--box);text-align:center}
+.twins p{font-size:13.5px!important;padding-left:6px}
+.meter div{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;color:var(--gray)}
+.meter b{color:var(--c);white-space:nowrap}
+.meter i{display:block;height:8px;border-radius:99px;background:var(--mist);margin-top:5px;overflow:hidden}
+.meter em{display:block;height:100%;background:var(--c);border-radius:99px}
+.bubble{background:var(--cs);border-radius:4px 16px 16px 16px;padding:12px 14px;font-weight:600;font-size:14.5px;color:var(--ink)}
+.bubble small{display:block;font-weight:500;font-size:12.5px;color:var(--gray);margin-top:4px}
+.tl6{display:grid;grid-template-columns:1fr 1.2fr 2.2fr 1fr;gap:4px}
+.tl6 span{font-size:12px;font-weight:600;text-align:center;padding:7px 4px;border-radius:8px;background:var(--cs);color:var(--forest)}
+.tl6 .long{background:var(--forest);color:var(--mint)}
+/* ads spacing */
+.adtop{gap:16px}
+#ads .adwork{gap:14px;margin-top:20px}
+.adwork div{padding:13px 15px;position:relative;padding-left:44px}
+.adwork div::before{content:"";position:absolute;left:14px;top:14px;width:20px;height:20px;border-radius:50%;background:rgba(31,210,134,.18) no-repeat center/12px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231fd286' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12 5 5 9-10'/%3E%3C/svg%3E")}
+.adwork .bad::before{background:rgba(251,176,0,.18) no-repeat center/11px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fbb000' stroke-width='3.5' stroke-linecap='round'%3E%3Cpath d='M6 6l12 12M18 6 6 18'/%3E%3C/svg%3E")}
+#ads .filters{margin:22px 0 16px;gap:8px}
+#ads .carousel{margin-top:4px}
+#ads .track{gap:14px}
+/* websites */
+.sitesx{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr) minmax(0,1.1fr);gap:16px;align-items:stretch}
+.site2{display:flex;flex-direction:column;gap:12px}
+.browser{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 20px 40px -30px rgba(15,94,83,.6)}
+.browser .bar{display:flex;align-items:center;gap:6px;padding:8px 12px;background:#f3f7f4;border-bottom:1px solid var(--line)}
+.browser .bar i{width:9px;height:9px;border-radius:50%;background:#d5e2da}
+.browser .bar i:first-child{background:#f3a493}.browser .bar i:nth-child(2){background:#f6cf6e}.browser .bar i:nth-child(3){background:#8fdcb4}
+.browser .bar span{margin-left:10px;font-size:12px;font-weight:600;color:var(--gray);background:#fff;border:1px solid var(--line);border-radius:99px;padding:2px 12px}
+.browser img{width:100%;aspect-ratio:16/8.6;object-fit:cover;object-position:top}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-size:12.5px;color:var(--gray);background:var(--mintsoft);border-radius:10px;padding:5px 10px;display:flex;gap:5px;align-items:baseline}
+.chips b{color:var(--forest);font-size:15px}
+.chips.c2 span{background:var(--boxsoft)}.chips.c2 b{color:var(--box)}
+.site2 .note{margin-top:0}
+.midc .line svg{max-height:200px}
+.sharebar{display:flex;height:34px;border-radius:10px;overflow:hidden;margin-top:8px}
+.sharebar div{display:grid;place-items:center;color:#fff;font-size:13px;font-weight:600;width:0;transition:width 1.2s cubic-bezier(.2,.7,.2,1) .3s}
+.wcf{margin-top:16px}
+.wcf .card,.wcf .dcard{position:relative;padding-top:20px}
+.wcf h3{margin:10px 0 2px}
+.wcf p{font-size:14.5px!important}
+.wico{width:40px;height:40px;border-radius:12px;display:grid;place-items:center}
+.wico svg{width:20px;height:20px}
+.w-why .wico{background:var(--mintsoft);color:#0d6a42}
+.w-cost{border-top:4px solid var(--red)}.w-cost .wico{background:var(--redsoft);color:var(--red)}
+.w-fix .wico{background:var(--mint);color:var(--forest)}
+/* proposals */
+.ktabs5{gap:10px}
+.ktabs5 .kt{flex-direction:row;align-items:center;gap:12px;padding:12px 14px;border-radius:16px;position:relative;background:#fff;box-shadow:0 10px 24px -22px rgba(15,94,83,.6)}
+.kt .ti{flex-shrink:0;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--mintsoft);color:var(--forest);transition:all .25s}
+.kt .ti svg{width:20px;height:20px}
+.ktabs5 .kt span{font-size:15.5px;line-height:1.2;flex:1}
+.ktabs5 .kt b{position:absolute;right:12px;top:8px;font-size:10.5px;font-weight:600;color:var(--gray2)}
+.ktabs5 .kt{padding-top:20px}
+.ktabs5 .kt[aria-selected="true"] .ti{background:var(--mint);color:var(--forest)}
+.ktabs5 .kt[aria-selected="true"]::after{content:"";position:absolute;left:50%;bottom:-8px;width:14px;height:14px;background:var(--forest);transform:translateX(-50%) rotate(45deg);border-radius:3px}
+.ktabs5 .kt[aria-selected="true"] b{color:#9fd9bc}
+.ppanel{margin-top:22px}
+.ptop{display:flex;gap:16px;align-items:center;margin-bottom:16px;background:linear-gradient(90deg,var(--forest) 0%,#2c4a3c 100%);border-radius:16px;padding:14px 20px;flex-wrap:nowrap}
+.ptop .pnum{flex-shrink:0;width:40px;height:40px;border-radius:50%;background:var(--mint);color:var(--forest);display:grid;place-items:center;font-weight:700;font-size:17px}
+.ptop h3{color:#fff;font-size:clamp(18px,1.5vw,23px)}
+.ptop p{color:#a9c1b4;font-size:14.5px;margin-top:2px}
+/* why me stats */
+.me .card .stat{background:linear-gradient(135deg,var(--forest),#18a86a);-webkit-background-clip:text;background-clip:text;color:transparent}
+@media (max-width:1180px){.sitesx{grid-template-columns:1fr 1fr}.midc{grid-column:span 2;order:3}}
+@media (max-width:960px){.sitesx{grid-template-columns:1fr}.midc{grid-column:auto}.ptop{flex-wrap:wrap}}
+@media (max-width:640px){.twins{grid-template-columns:56px 16px 56px;}.twins p{grid-column:1/-1;padding:0}.tl6{grid-template-columns:1fr 1fr}.ktabs5 .kt b{position:static;display:block}}
+.ktabs5 .kt[aria-selected="true"]{background:var(--forest);border-color:var(--forest)}
+.ktabs5 .kt[aria-selected="true"] span{color:#fff}
+.adtop .hbar{grid-template-columns:minmax(130px,175px) 1fr 30px}
+.head{margin-bottom:clamp(16px,2.2vh,26px)}
+.sq{margin-top:10px}
+#ads .filters{margin:18px 0 12px}
+@media (max-width:640px){.ktabs5{grid-template-columns:1fr!important}.ktabs5 .kt{min-width:0;padding-top:12px}.ktabs5 .kt b{display:none}.ktabs5 .kt[aria-selected="true"]::after{display:none}}
+.ktabs5 .kt{min-width:0}
+/* v11 */
+.screen.dark{background:radial-gradient(900px 480px at 100% 0%,rgba(31,210,134,.11),transparent 70%),radial-gradient(700px 400px at 0% 100%,rgba(31,210,134,.06),transparent 70%),var(--forest)}
+.dark .card,.dark .sku,.dark .pc,.dark .npc,.dark .kt{color:var(--ink)}
+.dark .card .note{color:var(--gray2)}
+.dark .tab{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);color:#cfe0d6}
+.dark .tab:hover{border-color:var(--mint);color:#fff}
+.dark .tab[aria-selected="true"]{background:var(--mint);border-color:var(--mint);color:var(--forest)}
+.dark .lightsnap{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+.dark .ktabs5 .kt{border-color:transparent}
+.dark .ktabs5 .kt[aria-selected="true"]{background:var(--mint);border-color:var(--mint)}
+.dark .ktabs5 .kt[aria-selected="true"] span{color:var(--forest)}
+.dark .ktabs5 .kt[aria-selected="true"] .ti{background:var(--forest);color:var(--mint)}
+.dark .ktabs5 .kt[aria-selected="true"] b{color:#0d6a42}
+.dark .ktabs5 .kt[aria-selected="true"]::after{background:var(--mint)}
+.dark .ptop{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
+.dark .ppanel>h3,.dark .mktwrap>div:not(.card)>h3{color:#fff}
+.dark .dl .btn.ghost{color:#fff}
+/* plan cards as buttons */
+button.gl{font:inherit;text-align:left;cursor:pointer;width:100%;color:inherit}
+.gl .how{display:inline-flex;align-items:center;gap:6px;margin:8px 0 0 8px;font-style:normal;font-size:12.5px;font-weight:600;color:#0d6a42}
+.gl .how::after{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform .2s}
+.gl:hover .how::after{transform:translateX(3px) rotate(-45deg)}
+/* explain pop-up */
+.proofdlg.wide{width:min(1060px,94vw)}
+.exp{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.exb{background:var(--mist);border-radius:14px;padding:16px 18px}
+.exb h4{font-size:13px;font-weight:700;color:#0d6a42;margin-bottom:6px}
+.exb p{font-size:15px;line-height:1.55;color:var(--ink);max-width:none}
+.exb ul{list-style:none;display:grid;gap:7px}
+.exb li{font-size:14.5px;line-height:1.5;padding-left:16px;position:relative}
+.exb li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:2px;background:var(--mint)}
+.exp .exb:first-child{grid-column:1/-1;background:linear-gradient(90deg,var(--mintsoft),#f4faf6)}
+.exm{grid-column:1/-1;background:var(--forest);color:#e7f1ec}
+.exm h4{color:var(--mint)}
+.exm table{width:100%;border-collapse:collapse;font-size:15px}
+.exm td{padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.16)}
+.exm td:last-child{text-align:right;font-weight:600;color:var(--mint);padding-left:16px;white-space:nowrap}
+.exm tr.last td{border:0;color:#fff;font-weight:700}
+.exm tr.last td:last-child{color:var(--amber)}
+.exn{font-size:13.5px!important;color:#a9c1b4!important;margin-top:8px}
+.exf{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--gray)}
+.exf span{max-width:70ch}
+.exf b{color:var(--ink)}
+.exp .exb:nth-child(2){grid-column:1/-1}
+/* ads, compact */
+.adtop2{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr) minmax(0,1fr);gap:14px;align-items:stretch}
+.adkpi{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:6px 8px!important}
+.adkpi div{display:flex;flex-direction:column;gap:2px;padding:10px 12px}
+.adkpi div:nth-child(1),.adkpi div:nth-child(2){border-bottom:1px solid rgba(255,255,255,.08)}
+.adkpi div:nth-child(odd){border-right:1px solid rgba(255,255,255,.08)}
+.adkpi b{font-size:26px;font-weight:600;color:#fff;letter-spacing:-.02em;line-height:1.1}
+.adkpi span{font-size:13px;color:#a9c1b4;line-height:1.35}
+.adtop2 .dcard{padding:14px 18px}
+.adtop2 h3{font-size:16px;margin-bottom:4px}
+.adtop2 .hbar{margin:6px 0;font-size:13.5px;grid-template-columns:minmax(120px,160px) 1fr 28px}
+#ads .adwork{margin-top:14px;gap:10px}
+#ads .adwork div{padding:9px 12px 9px 40px}
+#ads .adwork div::before{left:12px;top:11px}
+#ads .adwork span{font-size:12.5px}
+#ads .filters{margin:14px 0 10px}
+@media (max-width:1180px){.adtop2{grid-template-columns:1fr 1fr}.adkpi{grid-column:span 2;grid-template-columns:repeat(4,1fr)}.adkpi div{border:0!important}}
+@media (max-width:960px){.adtop2{grid-template-columns:1fr}.adkpi{grid-column:auto;grid-template-columns:1fr 1fr}.exp{grid-template-columns:1fr}}
+.adkpi b span{font-size:inherit;color:inherit;line-height:inherit}
+.dark .acts .hl{background:rgba(31,210,134,.12);border:1px solid rgba(31,210,134,.4)}
+.dark .ppanel .dcard{background:linear-gradient(160deg,#2f4a3d,#27403a);border:1px solid rgba(255,255,255,.1)}
+.exalt{grid-column:1/-1;background:#fff;border:1.5px dashed #f0b9aa}
+.exalt h4{color:var(--red)}
+.exalt table{width:100%;border-collapse:collapse;font-size:14.5px}
+.exalt td{padding:7px 0;border-bottom:1px dashed var(--line)}
+.exalt td:last-child{text-align:right;font-weight:600;color:var(--red);padding-left:16px}
+.exalt tr.last td{border:0;font-weight:700;color:var(--ink)}
+.exalt tr.last td:last-child{color:var(--red);white-space:normal}
+.exn2{font-size:13.5px!important;color:var(--gray)!important;margin-top:8px}
+
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/img/sova-logo.png" alt="Sova"><span>Category plan by Preetam</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Sections</button>
+    <ul class="menu" id="menu">
+      <li><a href="#thesis">Plan</a></li>
+      <li><a href="#market">Market</a></li>
+      <li><a href="#portfolio">Products</a></li>
+      <li><a href="#problems">Problems</a></li>
+      <li><a href="#comp">Competitors</a></li>
+      <li><a href="#ads">Ads</a></li>
+      <li><a href="#sites">Websites</a></li>
+      <li><a href="#proposals">Proposals</a></li>
+      <li><a href="#me">Why me</a></li>
+    </ul>
+  </div>
+  <svg class="pline" viewBox="0 0 1000 8" preserveAspectRatio="none" aria-hidden="true"><path id="pline"/></svg>
+</nav>
+
+<!-- 1 hero -->
+<header class="hero in" id="top">
+  <div class="pin">
+  <div class="wrap" style="display:flex;flex-direction:column;height:100%">
+    <div class="grid">
+      <div>
+        <img class="logo rv" src="assets/img/sova-logo-white.png" alt="Sova">
+        <h1 class="rv">A category plan for Sova's <span>diagnostics and supplements</span></h1>
+        <p class="lede rv">Built from Sova's two websites, Amazon, 1mg, all 69 live Meta ads, competitor stores and Similarweb traffic. The plan first, then the evidence, then the proposals.</p>
+        <div class="by rv">
+          <img src="assets/img/preetam.jpg" alt="Preetam Priyabrat">
+          <div><strong>Preetam Priyabrat</strong><span>Candidate for Category Manager, Diagnostics and Supplements</span></div>
+        </div>
+      </div>
+      <div class="stage rv" aria-hidden="true">
+        <div class="shadow"></div>
+        <div class="scene" id="scene">
+          <div class="box3d">
+            <div class="paper p3" data-z="-38" data-rise="275" data-start=".18"><b>5 proposals</b><span>one per function</span></div>
+            <div class="paper p2" data-z="0" data-rise="228" data-start=".28"><b>69 ads</b><span>decoded, every angle</span></div>
+            <div class="paper p1" data-z="38" data-rise="182" data-start=".38"><b>6 problems</b><span>each with screenshot proof</span></div>
+            <div class="face f-floor"></div>
+            <div class="face f-back"></div>
+            <div class="face f-left"></div>
+            <div class="face f-bottom"></div>
+            <div class="face f-right"><svg class="rib2" viewBox="0 0 180 120"><path d="M-20 100 C40 100 50 20 100 20 S170 90 200 60"/></svg><span>#SovaCategoryPlan</span></div>
+            <div class="face f-front">
+              <div class="brandrow"><img src="assets/img/sova-logo-white.png" alt=""></div>
+              <div class="perf"></div><div class="perf b"></div>
+              <div class="ttl"><b>Sova Category Plan</b><span>DIAGNOSTICS &amp;<br>SUPPLEMENTS</span></div>
+              <svg class="ribbon" viewBox="0 0 320 200"><path id="squiggle" d="M-10 150 C20 150 30 70 70 70 S110 170 145 170 S180 60 215 60 S250 160 285 150 S330 90 340 80"/></svg>
+              <div class="seal"><span>5 fixes<small>6 PROBLEMS</small></span></div>
+            </div>
+            <div class="lid"><div class="out"><img src="assets/img/sova-logo-white.png" alt=""></div><div class="in"></div></div>
+          </div>
+        </div>
+        <div class="cue" id="cue"><i></i>Scroll to open the plan</div>
+      </div>
+    </div>
+    <div class="g4 strip">
+      <div class="dcard rv"><b class="stat num" data-count="69">0</b><p>live Meta ads. Not one sells a supplement.</p></div>
+      <div class="dcard rv"><b class="stat num">₹1,000</b><p>gap: the same test on two Sova websites</p></div>
+      <div class="dcard rv"><b class="stat num">2 to 3 wks</b><p>from sample to report, per Sova's own pages</p></div>
+      <div class="dcard rv"><b class="stat num">3.4 to 4.0★</b><p>on Amazon, the only independent rating</p></div>
+    </div>
+  </div>
+  </div>
+</header>
+
+<section class="screen light" id="thesis" data-curve="r">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow rv"><b>1</b>The plan in one screen</div><h2 class="rv">Tests bring people in. Supplements pay the bills.</h2></div>
+      <p class="lede rv">Diagnostics is Sova's wedge and largest line. Six moves use it to win the second purchase. Open any card for the full reasoning, sources and maths.</p>
+    </div>
+    <div class="glance">
+      <button type="button" class="gl rv" data-explain="m1" aria-haspopup="dialog"><span class="gi" data-i="repeat"></span><div><small>01</small><h4>Sell a supplement after every test</h4><p>0 of 69 live ads sell one. A paid 30-day kit, ₹699 on report day.</p><span>₹6.2 L revenue per 1,000 tests</span><em class="how">How I got this</em></div></button>
+      <button type="button" class="gl rv" data-explain="m2" aria-haspopup="dialog"><span class="gi" data-i="tag"></span><div><small>02</small><h4>One price per test, and a chooser</h4><p>Same test: ₹3,999 on one site, ₹4,999 on the other.</p><span>Costs only developer time</span><em class="how">How I got this</em></div></button>
+      <button type="button" class="gl rv" data-explain="m3" aria-haspopup="dialog"><span class="gi" data-i="globe"></span><div><small>03</small><h4>Fix the website before buying traffic</h4><p>55% of sova.health visitors leave after one page (bounce rate).</p><span>+0.25 pt conversion: ~500 orders a month</span><em class="how">How I got this</em></div></button>
+      <button type="button" class="gl rv" data-explain="m4" aria-haspopup="dialog"><span class="gi" data-i="store"></span><div><small>04</small><h4>Put the sachets on chemist shelves</h4><p>Online only today. Wellbeing Nutrition gets 25% of sales offline.</p><span>~₹2.2 Cr a year at 1,000 stores</span><em class="how">How I got this</em></div></button>
+      <button type="button" class="gl rv" data-explain="m5" aria-haspopup="dialog"><span class="gi" data-i="link"></span><div><small>05</small><h4>Sell tests through trusted partners</h4><p>Hospitals, nutritionists and CRED already work with Sova.</p><span>Pay ~₹600 only when a test completes</span><em class="how">How I got this</em></div></button>
+      <button type="button" class="gl rv" data-explain="m6" aria-haspopup="dialog"><span class="gi" data-i="flask"></span><div><small>06</small><h4>Launch the products the range lacks</h4><p>Gummies, constipation, a free saliva scan and 7 more.</p><span>10 ideas, supplements first</span><em class="how">How I got this</em></div></button>
+    </div>
+  </div>
+</section>
+
+<section class="screen mist" id="market" data-curve="r">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow rv"><b>2</b>Market and Sova</div><h2 class="rv">The need is common. Pharma owns the shelf.</h2></div>
+      <p class="lede rv">The job is turning people who self-medicate with antacids and cheap probiotics into people who test, then buy what the test recommends.</p>
+    </div>
+    <div class="g4">
+      <div class="card rv mstat"><span class="sico" data-i="trending"></span><b class="stat">₹2,070 Cr</b><h4 style="margin-top:8px">Indian probiotics, 2025</h4><p>19% a year for five years. Over 90% is pharma. (PharmaTrac via IBEF)</p></div>
+      <div class="card rv mstat"><span class="sico" data-i="users"></span><b class="stat">4.2%</b><h4 style="margin-top:8px">Indians with IBS</h4><p>Indian Society of Gastroenterology study; estimates go up to 7.9%.</p></div>
+      <div class="card rv mstat"><span class="sico" data-i="tag"></span><b class="stat">₹10,099</b><h4 style="margin-top:8px">Redcliffe's gut test</h4><p>Sova's full test at ₹6,499 is already cheaper than the lab giant.</p></div>
+      <div class="card rv mstat"><span class="sico" data-i="activity"></span><b class="stat">₹100 Cr</b><h4 style="margin-top:8px">The Good Bug's round</h4><p>Gut supplements are drawing serious money (May 2025).</p></div>
+    </div>
+    <div class="g2" style="margin-top:14px">
+      <div class="calc rv">
+        <h3 style="margin-bottom:6px">A rough ceiling for the test business</h3>
+        <div class="row"><span>Indian adults</span><b>~95 Cr</b></div>
+        <div class="row"><span>With IBS (4.2%)</span><b>~4 Cr</b></div>
+        <div class="row"><span>Online, urban, can pay ₹4k (my 10%)</span><b>~40 L</b></div>
+        <div class="row"><span>Test once a year at ~₹4,500</span><b>₹1,800 Cr</b></div>
+        <div class="row tot"><span>Every 1% of that pool</span><b>~₹18 Cr a year</b></div>
+        <p class="note" style="color:#8fa99b">My estimate, IBS only. Acidity and constipation groups are far larger.</p>
+      </div>
+      <div class="card rv">
+        <h3>What the customer compares Sova with</h3>
+        <table class="ctable">
+          <tr><td>Endoscopy or colonoscopy</td><td>₹8k to ₹15k</td></tr>
+          <tr><td>Redcliffe gut microbiome test</td><td>₹10,099</td></tr>
+          <tr class="us"><td>Sova Gut Microbiome Test</td><td>₹6,499</td></tr>
+          <tr class="us"><td>Sova Digestion Test</td><td>₹3,999</td></tr>
+          <tr><td>The Good Bug synbiotics</td><td>₹500 to ₹1,000</td></tr>
+          <tr><td>Pharma probiotic strip</td><td>under ₹300</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="snap rv">
+      <div><b>Sova, briefly</b><span>Gurugram, 2023. Tanveer Singh (CEO), Max Kushnir (CSO)</span></div>
+      <div><b>130</b><span>people; $1M seed in 2024; revenue "32x since inception"</span></div>
+      <div><b>26</b><span>products: 10 tests, 10 supplements, 6 programmes</span></div>
+      <div><b>35,000+</b><span>samples in its Indian gut database</span></div>
+      <div><b>Partners</b><span>Sri Ganga Ram and Medanta tie-ups (Jul 2026), 50+ nutritionists</span></div>
+      <div><b>Now hiring</b><span>B2B partnerships and alliances; CEO's focus is trust and repeat</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="screen dark" id="portfolio" data-curve="l">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow rv"><b>3</b>Products</div><h2 class="rv">26 products. Tests carry the brand, sachets carry the repeat.</h2></div>
+      <p class="lede rv">Live Shopify catalogue, 12 November 2026. Selling price, with Sova's "compare at" price struck through.</p>
+    </div>
+    <div class="tabs rv" role="tablist" aria-label="Products">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="p-tests">Tests (10)</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-sups">Supplements (10)</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-prog">Personalised and programmes (6)</button>
+    </div>
+    <div class="panel rv" id="p-tests" role="tabpanel"><div class="skus" id="skus-tests"></div></div>
+    <div class="panel" id="p-sups" role="tabpanel" hidden><div class="skus" id="skus-sups"></div></div>
+    <div class="panel" id="p-prog" role="tabpanel" hidden><div class="skus" id="skus-prog"></div></div>
+    <h3 class="rv" style="margin:16px 0 10px">Where each product sells</h3>
+    <div class="snap lightsnap rv" style="margin-top:0">
+      <div><b>sova.health</b><span>All 26 products, every test</span></div>
+      <div><b>consultsova.com</b><span>₹199 consult and the Digestion Test</span></div>
+      <div><b>Amazon, Tata 1mg</b><span>5 sachets and gummies; no tests</span></div>
+      <div><b>CRED</b><span>Acidity travel packs</span></div>
+      <div><b>Quick commerce</b><span>Nothing on Blinkit, Zepto or Instamart</span></div>
+      <div><b>Chemists</b><span>Not present</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="screen light" id="problems" data-curve="r">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow rv"><b>4</b>Problems</div><h2 class="rv">Six things holding the category back</h2></div>
+      <p class="lede rv">Numbered, so each proposal can point back to them. Every card opens screenshots taken 15 November 2026.</p>
+    </div>
+    <div class="g3 pcs">
+      <article class="pc rv" style="--c:#c8492f;--cs:#fbe5de">
+        <div class="pch"><span class="pico" data-i="tag"></span><span class="ptag">1. Price</span><button class="pbtn" data-proof="price">Proof</button></div>
+        <h3>The same test costs ₹3,999 or ₹4,999</h3>
+        <p>₹3,999 on sova.health, ₹4,999 on consultsova.com. One ad sells the ₹6,499 test at ₹7,999.</p>
+        <div class="fog"><span>₹3,999</span><span>₹4,999</span><span>₹6,499</span><span>₹7,999</span></div>
+      </article>
+      <article class="pc rv" style="--c:#33266e;--cs:#ebe7f8">
+        <div class="pch"><span class="pico" data-i="copy"></span><span class="ptag">2. Choice</span><button class="pbtn" data-proof="choice">Proof</button></div>
+        <h3>Two tests that look the same</h3>
+        <div class="twins"><figure><img src="assets/img/p-sdt.jpg" alt="Digestion Test" loading="lazy"><figcaption>₹3,999</figcaption></figure><b>=</b><figure><img src="assets/img/p-gmt.jpg" alt="Microbiome Test" loading="lazy"><figcaption>₹6,499</figcaption></figure><p>Same box photo, same opening line. The homepage leads with the ₹6,499 one.</p></div>
+      </article>
+      <article class="pc rv" style="--c:#0f5e53;--cs:#dff1ee">
+        <div class="pch"><span class="pico" data-i="users"></span><span class="ptag">3. Trust</span><button class="pbtn" data-proof="trust">Proof</button></div>
+        <h3>Four different customer counts</h3>
+        <p>Pages, ads and interviews disagree, in a category buyers already suspect.</p>
+        <div class="fog"><span>35,000+</span><span>50,000+</span><span>1,00,000+</span><span>5,00,000+</span></div>
+      </article>
+      <article class="pc rv" style="--c:#0d6a42;--cs:#dcf7ea">
+        <div class="pch"><span class="pico" data-i="repeat"></span><span class="ptag">4. Revenue</span><button class="pbtn" data-proof="bridge">Proof</button></div>
+        <h3>Nothing connects the test to the supplement</h3>
+        <div class="meter"><div><span>Live Meta ads selling a supplement</span><b>0 of 69</b></div><i><em style="width:1.5%"></em></i></div>
+        <div class="meter"><div><span>Sova sachets vs Tata 1mg on Amazon</span><b>3.4 to 4.0★ vs 4.2★</b></div><i><em style="width:76%"></em></i></div>
+      </article>
+      <article class="pc rv" style="--c:#b07a00;--cs:#fff2cf">
+        <div class="pch"><span class="pico" data-i="message"></span><span class="ptag">5. Conversion</span><button class="pbtn" data-proof="bait">Proof</button></div>
+        <h3>The ₹199 consult reads as bait</h3>
+        <div class="bubble">"200 RS LEKAR 5000 KA TEST BOLENGE"<small>"They take ₹200, then pitch a ₹5,000 test." Buyer review, Nov 2026</small></div>
+      </article>
+      <article class="pc rv" style="--c:#203129;--cs:#e7efe9">
+        <div class="pch"><span class="pico" data-i="clock"></span><span class="ptag">6. Wait</span><button class="pbtn" data-proof="wait">Proof</button></div>
+        <h3>Three weeks with nothing to buy</h3>
+        <div class="tl6"><span>Kit</span><span>Sample in 2 days</span><span class="long">Lab: 2 to 3 weeks</span><span>Report</span></div>
+        <p>Symptoms carry on, and the antacid at the chemist fills the gap.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="screen mist" id="comp" data-curve="l">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow rv"><b>5</b>Competitors</div><h2 class="rv">Others own one piece. Sova owns the whole loop.</h2></div>
+      <p class="lede rv">Diagnostics players only, plotted by entry price and by how much happens after the result. Prices checked 15 November 2026.</p>
+    </div>
+    <div class="g2 compgrid" style="align-items:stretch">
+      <div class="rv mapcol"><div class="scroll-x mapwrap"><div class="pmap" aria-label="Positioning map of Indian gut test providers by price and follow-through">
+        <div class="plot">
+          <div class="grid-y" style="top:12%"></div><div class="grid-y" style="top:46%"></div><div class="grid-y" style="top:68%"></div>
+          <span class="yl" style="top:12%">Test, consult, custom product, coaching</span>
+          <span class="yl" style="top:46%">Test plus plan or product</span>
+          <span class="yl" style="top:68%">Report plus diet plan</span>
+          <span class="yl" style="top:96%">Test report only</span>
+          <span class="xl" style="left:3%">Free</span><span class="xl" style="left:22%">₹1k</span><span class="xl" style="left:42%">₹4k</span><span class="xl" style="left:62%">₹7k</span><span class="xl" style="left:80%">₹10k</span><span class="xl" style="left:95%">₹13k</span>
+
+          <div class="bub hollow" style="left:6%;top:28%;--bd:.2s;--sz:18px"><i></i><span>Mool (free quiz, no lab test)</span></div>
+          <div class="bub" style="left:12%;top:56%;--bd:.3s;--sz:18px"><i class="k-d2c"></i><span>Guttify ₹499 scan, free over ₹999</span></div>
+          <div class="bub l" style="left:41%;top:60%;--bd:.4s;--sz:16px"><i class="k-sci"></i><span>miGQ ₹3,999 to ₹19,999</span></div>
+          <div class="bub" style="left:39%;top:42%;--bd:.5s;--sz:16px"><i class="k-sci"></i><span>MicrobioTx ₹3,540</span></div>
+          <div class="bub us" style="left:44%;top:22%;--bd:.6s;--sz:22px"><i class="k-sova"></i><span>Sova Digestion ₹3,999</span></div>
+          <div class="bub us" style="left:58%;top:10%;--bd:.7s;--sz:26px"><i class="k-sova"></i><span>Sova Microbiome ₹6,499</span></div>
+          <div class="bub l" style="left:72%;top:52%;--bd:.8s;--sz:20px"><i class="k-sci"></i><span>BugSpeaks ₹8,998</span></div>
+          <div class="bub l" style="left:66%;top:86%;--bd:.85s;--sz:16px"><i class="k-lab"></i><span>Max Lab ₹7,999</span></div>
+          <div class="bub l" style="left:79%;top:72%;--bd:.9s;--sz:18px"><i class="k-lab"></i><span>Orange Health ₹9,999</span></div>
+          <div class="bub l" style="left:84%;top:95%;--bd:.95s;--sz:20px"><i class="k-lab"></i><span>Redcliffe ₹10,099</span></div>
+          <div class="bub l" style="left:93%;top:84%;--bd:1s;--sz:20px"><i class="k-lab"></i><span>Apollo 24|7 ₹12,759</span></div>
+        </div>
+      </div></div>
+      <div class="proofrow"><button class="pbtn" data-proof="rivals">See competitor pricing screenshots</button></div></div>
+      <div class="scroll-x rv">
+      <table class="ctab">
+        <thead><tr><th>Player</th><th>Entry price</th><th>Sample</th><th>After the result</th></tr></thead>
+        <tbody>
+          <tr class="sova"><td>Sova<small>Gurugram, 2023</small></td><td>Free quiz, ₹199 consult, ₹3,999 test</td><td>Stool</td><td class="y">45-min consult, Sova X made from the report, coaching</td></tr>
+          <tr><td>Lab chains<small>Apollo, Redcliffe, Orange, Max, 1mg Labs</small></td><td>₹7,999 to ₹12,759</td><td>Stool</td><td class="n">Report only</td></tr>
+          <tr><td>BugSpeaks<small>Leucine Rich Bio, 2014</small></td><td>₹8,998 to ₹10,000</td><td>Stool, blood</td><td class="y">12-week diet plan, own probiotics; 20,000+ samples</td></tr>
+          <tr><td>MicrobioTx<small>Bengaluru, 2022</small></td><td>₹3,540; full panel ₹7,999</td><td>Finger-prick blood</td><td class="y">₹4,720 personal probiotic, ₹1,000 synbiotics, add-ons</td></tr>
+          <tr><td>miGQ<small>microbiome.in</small></td><td>₹3,999 to ₹19,999</td><td>Stool</td><td class="y">Telehealth consult, personalised probiotics</td></tr>
+          <tr><td>Guttify<small>Delhi NCR, 2025</small></td><td>₹499 scan, free over ₹999</td><td>Saliva, read at home</td><td class="y">₹599 effervescent supplements</td></tr>
+          <tr><td>Mool Health</td><td>Free quiz</td><td>None</td><td class="y">Ayurvedic kit, expert support; 5.24 L visits in 3 months</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Watch list: ITC's Aashirvaad Happy Tummy (gut awareness at FMCG scale), Lords Mark (3,000 planned gut-analytics centres), Viome (not in India yet).</p>
+      </div>
+    </div>
+    <div class="g2 moatrow">
+      <div><h3 class="rv" style="margin-bottom:10px">Sova's moat</h3>
+        <div class="g2 moats">
+          <div class="card moat rv"><b class="big">4 in 1</b><p>Test, expert, custom probiotic and coaching under one brand. Rivals own one or two.</p></div>
+          <div class="card moat rv"><b class="big">35,000+</b><p>Indian samples behind Sova X. Every retest adds to it.</p></div>
+          <div class="card moat rv"><b class="big">₹4k to ₹6.5k</b><p>Deeper than free quizzes and scans, about half a lab's price.</p></div>
+          <div class="card moat rv"><b class="big">2 hospitals</b><p>Hospital tie-ups and a nutritionist network: doors a quiz brand can't copy.</p></div>
+        </div></div>
+      <div><h3 class="rv" style="margin-bottom:10px">What I'd borrow from rivals</h3>
+        <div class="borrow">
+          <div class="card rv"><span class="who">Guttify</span><p>Gives its saliva scan free to sell ₹599 supplements.</p><b>Sova's version: a free saliva scan inside sachet orders</b></div>
+          <div class="card rv"><span class="who">MicrobioTx</span><p>Sells extras at checkout: a ₹500 food guide, a ₹2,500 toxin report.</p><b>Sova's version: extra reports run on the stool sample already in the lab</b></div>
+          <div class="card rv"><span class="who">Lab chains</span><p>Win because the doctor already trusts them.</p><b>Sova's version: co-branded hospital test passes</b></div>
+        </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="screen dark" id="ads" data-curve="r">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow rv"><b>6</b>Meta ads</div><h2 class="rv">69 live ads, built to sell one test and capture leads</h2></div>
+      <p class="lede rv">Every ad live on the "Sova" and "Sova Health" pages in India on 11 November 2026. Filter by angle; click any ad to open it in the Ad Library.</p>
+    </div>
+    <div class="adtop2">
+      <div class="dcard rv adkpi">
+        <div><b class="num" data-count="69">0</b><span>live ads: 56 on "Sova", 13 on "Sova Health"</span></div>
+        <div><b class="num"><span data-count="78">0</span>%</b><span>video, mostly creators and doctors</span></div>
+        <div><b class="num"><span data-count="52">0</span>%</b><span>launched on 10 and 11 November</span></div>
+        <div><b class="num">0</b><span>for any supplement or programme</span></div>
+      </div>
+      <div class="dcard rv"><h3>What the ad sells</h3><div id="funnelBars"></div></div>
+      <div class="dcard rv"><h3>Top creative angles</h3><div id="angleBars"></div></div>
+    </div>
+    <div class="adwork rv">
+      <div class="good"><b>Works</b><span>The free Gut Health Score: oldest ads, top of the impression ranking</span></div>
+      <div class="good"><b>Works</b><span>Hinglish hooks on years of suffering: "10 saal ki"</span></div>
+      <div class="good"><b>Works</b><span>"Your reports look normal. Your symptoms don't."</span></div>
+      <div class="good"><b>Works</b><span>Sceptic-first creators: "Scam or real? I tested it"</span></div>
+      <div class="bad"><b>Doesn't</b><span>36 ads in 48 hours across two pages bidding in one auction</span></div>
+    </div>
+    <div class="filters rv" id="filters"></div>
+    <div class="carousel rv">
+      <button class="cbtn prev" id="prev" aria-label="Previous ads"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m15 18-6-6 6-6"/></svg></button>
+      <div class="track" id="gallery"></div>
+      <button class="cbtn next" id="next" aria-label="Next ads"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m9 18 6-6-6-6"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<section class="screen light" id="sites" data-curve="l">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow rv"><b>7</b>Websites</div><h2 class="rv">Two stores: Google feeds one, Meta feeds the other</h2></div>
+      <p class="lede rv">sova.health is the main store. consultsova.com is a second Shopify store for Meta leads, with its own checkout, pixel and customer list. Similarweb, Aug to Oct 2026.</p>
+    </div>
+    <div class="sitesx">
+      <div class="card site2 rv">
+        <div class="browser"><div class="bar"><i></i><i></i><i></i><span>sova.health</span></div><img src="assets/img/hero-sova.jpg" alt="sova.health homepage" loading="lazy"></div>
+        <div class="chips"><span><b>4.27 L</b>visits</span><span><b>81.6k</b>users a month</span><span><b>55%</b>bounce</span><span><b>36%</b>paid search</span><span><b>40</b>of 69 ads</span></div>
+        <p class="note">Main store, all 26 products. Includes digestion.sova.health.</p>
+      </div>
+      <div class="card rv midc">
+        <h3>Share of visits</h3>
+        <div class="sharebar"><div data-w="70.4" style="background:var(--forest)">70%</div><div data-w="29.6" style="background:var(--box)">30%</div></div>
+        <h3 style="margin-top:14px">Monthly visits</h3>
+        <div class="line" style="margin-top:12px">
+          <svg viewBox="0 0 400 230" role="img" aria-label="sova.health: about 84k, 218k, 125k. consultsova.com: about 80k, 60k, 39k.">
+            <line x1="30" y1="200" x2="380" y2="200" stroke="#e1e9e4"/>
+            <path class="p1" id="l1" d="M50 156 L205 40 L360 110"/>
+            <path class="p2" id="l2" d="M50 158 L205 168 L360 179"/>
+            <circle cx="50" cy="156" r="5" fill="#203129"/><circle cx="205" cy="40" r="5" fill="#fbb000"/><circle cx="360" cy="110" r="5" fill="#203129"/>
+            <circle cx="50" cy="158" r="5" fill="#33266e"/><circle cx="205" cy="168" r="5" fill="#33266e"/><circle cx="360" cy="179" r="5" fill="#33266e"/>
+            <text class="lab" x="50" y="140" text-anchor="middle" style="fill:#203129">84k</text>
+            <text class="lab" x="205" y="26" text-anchor="middle" style="fill:#203129">2.18 L</text>
+            <text class="lab" x="360" y="96" text-anchor="middle" style="fill:#203129">1.25 L</text>
+            <text class="lab" x="205" y="188" text-anchor="middle" style="fill:#33266e">60k</text>
+            <text class="lab" x="360" y="196" text-anchor="middle" style="fill:#33266e">39k</text>
+            <text x="50" y="222" text-anchor="middle">Aug</text><text x="205" y="222" text-anchor="middle">Sep</text><text x="360" y="222" text-anchor="middle">Oct</text>
+          </svg>
+        </div>
+        <p class="note">consultsova.com halved in two months while 29 ads still point to it. Combined, the two sites out-visit every gut-health site in Similarweb's set.</p>
+      </div>
+      <div class="card site2 rv">
+        <div class="browser"><div class="bar"><i></i><i></i><i></i><span>consultsova.com</span></div><img src="assets/img/site-consult.jpg" alt="consultsova.com homepage" loading="lazy"></div>
+        <div class="chips c2"><span><b>1.80 L</b>visits</span><span><b>31.4k</b>users a month</span><span><b>40%</b>bounce</span><span><b>33%</b>paid social</span><span><b>29</b>of 69 ads</span></div>
+        <p class="note">Lead store: the ₹199 consult and one test.</p>
+      </div>
+    </div>
+    <div class="g3 wcf">
+      <div class="card rv w-why"><span class="wico" data-i="search"></span><h3>Why two</h3><p>Bold claims stay off the main domain. A page with one button bounces less. It can test a higher price, and tracks separately.</p></div>
+      <div class="card rv w-cost"><span class="wico" data-i="alert"></span><h3>What it costs</h3><p>One customer becomes two records, so test-to-supplement can't be measured. Two pixels, split brand search, and 91% of referrals arrive on untagged bit.ly links.</p></div>
+      <div class="dcard rv w-fix"><span class="wico" data-i="check"></span><h3>The fix: one store, many doors</h3><p>Every order on sova.health with one pixel. Funnel pages as templates (/score, /digestion, /consult) with no menu and one button. consultsova.com kept only as a page if it's a deliberate hedge. Tagged links, measured by entry page.</p></div>
+    </div>
+    <div class="dl rv">
+      <a class="btn" href="assets/reports/similarweb-sova-health-aug-oct-2026.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>Similarweb report: sova.health</a>
+      <a class="btn ghost" href="assets/reports/similarweb-consultsova-aug-oct-2026.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>Similarweb report: consultsova.com</a>
+    </div>
+  </div>
+</section>
+
+<section class="screen dark" id="proposals" data-curve="r">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow rv"><b>8</b>Proposals</div><h2 class="rv">My proposed solutions</h2></div>
+      <p class="lede rv">Five proposals, one per function. Each names the problems it fixes and what it costs. Pick one to open it.</p>
+    </div>
+    <div class="ktabs ktabs5 rv" role="tablist" aria-label="Proposals">
+      <button class="kt" role="tab" id="tp-price" aria-selected="true" aria-controls="pp-price"><i class="ti" data-i="target"></i><span>Pricing and conversion</span><b>Fixes 1, 2, 3, 5</b></button>
+      <button class="kt" role="tab" id="tp-chan" aria-selected="false" aria-controls="pp-chan"><i class="ti" data-i="store"></i><span>New channels</span><b>Chemists and partners</b></button>
+      <button class="kt" role="tab" id="tp-npd" aria-selected="false" aria-controls="pp-npd"><i class="ti" data-i="flask"></i><span>New products</span><b>10 ideas</b></button>
+      <button class="kt" role="tab" id="tp-mkt" aria-selected="false" aria-controls="pp-mkt"><i class="ti" data-i="megaphone"></i><span>Marketing and retention</span><b>Fixes 4, 6</b></button>
+      <button class="kt" role="tab" id="tp-ops" aria-selected="false" aria-controls="pp-ops"><i class="ti" data-i="truck"></i><span>Operations and P&amp;L</span><b>Unit economics</b></button>
+    </div>
+    <div class="ppanel" id="pp-price" role="tabpanel">
+    <div class="ptop"><span class="pnum">1</span><div><h3>Make the first test easy to pick and easy to trust</h3><p>Fixes problems 1, 2, 3 and 5. Costs developer time, not ad money.</p></div></div>
+    <div class="g2 penwrap">
+      <div class="card rv">
+        <h3>The ladder, one price per rung</h3>
+        <div class="ladder">
+          <div class="rung" style="background:#6f8679;min-height:64px"><b>Free</b><span>Gut Health Score quiz</span></div>
+          <div class="rung" style="background:#5b7366;min-height:84px"><b>Free</b><span>Saliva scan in sachet orders</span></div>
+          <div class="rung" style="background:#486155;min-height:104px"><b>₹199</b><span>Consult, adjusted in the test</span></div>
+          <div class="rung" style="background:#203129;min-height:124px"><b>₹3,999</b><span>Digestion Test: start here</span></div>
+          <div class="rung" style="background:#33266e;min-height:144px"><b>₹6,499</b><span>Microbiome Test: see everything</span></div>
+          <div class="rung" style="background:#4a3a9a;min-height:164px"><b>Plan</b><span>Sachets, Sova X, coaching</span></div>
+          <div class="rung" style="background:#fbb000;color:#203129;min-height:184px"><b>₹2,499</b><span>Retest at 90 days</span></div>
+        </div>
+      </div>
+      <div class="g2 acts">
+        <div class="card rv"><h4>One price per test</h4><p>End the ₹3,999 and ₹4,999 split. To test price, run ₹3,999 against ₹4,499 on one page for four weeks.</p></div>
+        <div class="card rv"><h4>A 3-question test chooser</h4><p>Symptom, how long, what's been tried. Then one test. Give each test its own photo and a one-line difference.</p></div>
+        <div class="card rv"><h4>Say the ₹199 upfront</h4><p>"Adjusted in your test price if you go ahead," on the booking page. It answers the bait review.</p></div>
+        <div class="card rv"><h4>Lead with the entry test</h4><p>The bestseller row opens at ₹6,499. Open with "Start here, ₹3,999" and show "report in 2 to 3 weeks" beside it.</p></div>
+        <div class="card rv"><h4>One customer number</h4><p>Pick one audited count and use it on every page and ad.</p></div>
+        <div class="card rv hl"><h4>~₹10 L a month</h4><p>for each +0.25 point of conversion: ~500 orders on 2 L visits at a ₹2,000 average order. A scenario; Sova's rate isn't public.</p></div>
+      </div>
+    </div>
+    </div>
+    <div class="ppanel" id="pp-chan" role="tabpanel" hidden>
+    <div class="ptop"><span class="pnum">2</span><div><h3>Supplements on chemist shelves. Tests through trusted partners.</h3><p>Each channel opens small and grows only after it passes a gate.</p></div></div>
+    <div class="g2 chan">
+      <div class="card rv">
+        <h3>Chemist shelves: supplements only</h3>
+        <p>Probiotics in India are ₹2,070 Cr, over 90% pharma, bought at the counter. Sova's sachets are only online. Every pack carries a QR code to the free quiz, so the shelf also sells the test.</p>
+        <div class="shelf">
+          <div><img src="assets/img/p-travel.jpg" alt="Acidity tabs" loading="lazy"><b>Acidity tabs</b><span>₹99 strip of 3</span></div>
+          <div><img src="assets/img/p-debloat.jpg" alt="Pop to Debloat" loading="lazy"><b>Pop to Debloat</b><span>₹499</span></div>
+          <div><img src="assets/img/p-lactase.jpg" alt="Dairy Digestive" loading="lazy"><b>Dairy Digestive</b><span>₹249</span></div>
+          <div><img src="assets/img/p-plugflow.jpg" alt="Plug the Flow" loading="lazy"><b>Plug the Flow</b><span>₹499</span></div>
+        </div>
+        <div class="steps3">
+          <div><b>300 NCR chemists</b><span>One distributor. Gate: 60% sold in 30 days</span></div>
+          <div><b>Chain listings</b><span>Apollo (7,000+ stores), MedPlus. Gate: reorders</span></div>
+          <div><b>Malls, airports</b><span>Wellbeing Nutrition's route. Gate: margin</span></div>
+        </div>
+        <div class="kv2"><span>Revenue a year at 300 / 1,000 / 3,000 stores</span><b>₹65 L / ₹2.2 Cr / ₹6.5 Cr</b></div>
+        <p class="note">My estimate: 6 packs a store a month at ₹549, Sova keeps 55% after retailer, distributor and schemes. Shelves also avoid RTO, orders refused at the door and shipped back: 20 to 25% of cash-on-delivery orders online, ₹180 to ₹240 lost each.</p>
+      </div>
+      <div class="card rv">
+        <h3>Trusted partners: tests</h3>
+        <p>The partner sells to its own patients or staff and earns a fee only when a test completes. Sova is hiring B2B partnership sales now.</p>
+        <div class="plist">
+          <div><b>Hospital test pass <i>Start here</i></b><span>Co-branded "Medanta and Sova Gut Test" at the gastro desk; doctor gets a one-page summary</span><em>15 to 20% per test. Gate: 200 passes in 90 days</em></div>
+          <div><b>Health-check add-on</b><span>Gut test added to hospital and lab health-check packages</span><em>Margin on the add-on. Gate: 5% attach</em></div>
+          <div><b>Doctor and nutritionist codes</b><span>Patient saves ₹300, referrer earns, Sova sees who refers</span><em>10% or free consults. Gate: 20 active in NCR</em></div>
+          <div><b>Employers</b><span>Free Gut Health Score at health camps, staff discount, Diwali kits</span><em>Gate: paid tests per 1,000 staff</em></div>
+          <div><b>Insurers and OPD wallets</b><span>Test payable from the policy's OPD balance</span><em>Gate: activation, second purchase</em></div>
+          <div><b>CRED and rewards</b><span>Add test vouchers and refills to the travel-pack listing</span><em>Gate: repeat rate vs Meta buyers</em></div>
+        </div>
+        <p class="note">Proof it works elsewhere: Thyrocare's partner business grew 26% in Q1 FY27; Everlywell sells home kits off the shelf at CVS and Target.</p>
+      </div>
+    </div>
+    </div>
+    <div class="ppanel" id="pp-npd" role="tabpanel" hidden>
+    <div class="ptop"><span class="pnum">3</span><div><h3>Ten products the range is missing</h3><p>Seven supplements first, then three tests and services. Prices are starting points to test.</p></div></div>
+    <div class="npc-grid">
+      <article class="npc s rv"><div class="mock" data-m="jar" data-c="#1fd286" data-t="Daily Gut" data-s="Gummies"></div><div><h4>Probiotic gummies <i>First</i></h4><p>Sova's Sleep gummies are its best-rated product on Amazon. Same format, gut strains.</p><em>₹599 / 30, chemists and Blinkit</em></div></article>
+      <article class="npc s rv"><div class="mock" data-m="jar" data-c="#fbb000" data-t="Tummy" data-s="Kids"></div><div><h4>Kids' tummy gummies</h4><p>Constipation and fussy eating. Kids and gut are Wellbeing Nutrition's FY26 bets.</p><em>₹549 / 30, chemists and Amazon</em></div></article>
+      <article class="npc s rv"><div class="mock" data-m="pouch" data-c="#0f5e53" data-t="GLP-1" data-s="Companion"></div><div><h4>GLP-1 gut companion <i>Timely</i></h4><p>Fibre and probiotics for weight-loss jab users, who often get constipated. Generics launched March 2026.</p><em>₹999 / month, clinics and D2C</em></div></article>
+      <article class="npc s rv"><div class="mock" data-m="pouch" data-c="#33266e" data-t="Go Daily" data-s="Constipation"></div><div><h4>Constipation synbiotic <i>Gap</i></h4><p>A top-three symptom in Sova's own ads, with no Sova product for it.</p><em>₹899 / month, all channels</em></div></article>
+      <article class="npc s rv"><div class="mock" data-m="pouch" data-c="#c8492f" data-t="Her Gut" data-s="Cycle"></div><div><h4>Women's gut</h4><p>Bloating that tracks the cycle and PCOS. Interview 30 customers first.</p><em>₹999 / month, D2C and gynaecologists</em></div></article>
+      <article class="npc s rv"><div class="mock" data-m="box" data-c="#0f5e53" data-t="Restore" data-s="Antibiotics"></div><div><h4>After-antibiotic kit</h4><p>7-day probiotic course sold beside the antibiotic at the counter.</p><em>₹299, chemists</em></div></article>
+      <article class="npc s rv"><div class="mock" data-m="strip" data-c="#1fd286" data-t="Acidity" data-s="3 tabs"></div><div><h4>₹99 acidity strip</h4><p>Three tabs from today's ₹177 travel pack, at an impulse price.</p><em>₹99, chemists and Blinkit</em></div></article>
+      <article class="npc t rv"><div class="mock" data-m="kit" data-c="#33266e" data-t="Saliva" data-s="Scan"></div><div><h4>Saliva gut scan <i>Front door</i></h4><p>At-home strip, no pickup, free in sachet orders over ₹1,499. An expert reads the photo free on WhatsApp.</p><em>~₹200 cost; the bigger basket pays for it</em></div></article>
+      <article class="npc t rv"><div class="mock" data-m="report" data-c="#33266e" data-t="+ Add-on" data-s="Same sample"></div><div><h4>Same-sample add-ons</h4><p>Food intolerance or antibiotic report from the stool already in the lab. No new kit.</p><em>₹1,499 to ₹1,999; 1 in 5 takes it: +₹300 per order</em></div></article>
+      <article class="npc t rv"><div class="mock" data-m="report" data-c="#fbb000" data-t="Day 90" data-s="Retest"></div><div><h4>90-day retest</h4><p>Shows what changed. Proof for ads and a second purchase.</p><em>₹2,499, offered on report day</em></div></article>
+    </div>
+    </div>
+    <div class="ppanel" id="pp-mkt" role="tabpanel" hidden>
+    <div class="ptop"><span class="pnum">4</span><div><h3>Win the first sachet cheaply. Keep the customer on WhatsApp.</h3><p>Fixes problems 4 and 6. Ads win a cheap first order; WhatsApp, which Sova already runs on, sells the refill, the retest and the next test.</p></div></div>
+    <div class="g2 mktwrap">
+      <div>
+        <h3 class="rv" style="margin-bottom:10px">Acquisition</h3>
+        <div class="g2">
+          <div class="card rv"><h4>Supplement-first ads</h4><p>A ₹499 starter sachet is an easier first buy than a ₹3,999 test. Retarget sachet buyers to the test.</p></div>
+          <div class="card rv"><h4>Hindi and regional</h4><p>Re-cut Sova's five best ads in Hindi first; keep them if the cost per first order beats English.</p></div>
+          <div class="card rv"><h4>Experts as creators</h4><p>Sova's nutritionists answering one symptom a week. Their faces, Sova's account.</p></div>
+          <div class="card rv"><h4>Fix Amazon</h4><p>Fix the moisture complaint behind the lowest ratings; add a pack insert offering a free expert call and a review request.</p></div>
+          <div class="card rv"><h4>Quick commerce</h4><p>Lactase and acidity tabs are after-meal buys. Two cities on Blinkit and Zepto.</p></div>
+          <div class="card rv"><h4>Answer AI assistants</h4><p>People ask ChatGPT whether a gut test is worth it. Write the pages those answers quote.</p></div>
+        </div>
+      </div>
+      <div class="card rv wa">
+        <h3>The WhatsApp journey after a test order</h3>
+        <ol class="wal">
+          <li><b>Day 0</b><span>Welcome, 60-second collection video, pickup slot</span></li>
+          <li><b>Day 2</b><span>"Collect within 2 days" reminder</span></li>
+          <li><b>Day 5</b><span>Sample in the lab. Symptom diary starts</span></li>
+          <li><b>Day 12</b><span>Starter sachet offer for the wait</span></li>
+          <li><b>Report</b><span>Consult booked; matched 30-day kit offered at ₹699</span></li>
+          <li><b>Day 24</b><span>Refill reminder before the sachets run out</span></li>
+          <li><b>Day 90</b><span>Retest offer: see what changed</span></li>
+          <li><b>Day 120</b><span>No order? Expert check-in, family-pack referral</span></li>
+        </ol>
+        <p class="note">How I'll measure: repeat purchase within 90 days, refill rate, cost per first order by angle and language.</p>
+      </div>
+    </div>
+    </div>
+    <div class="ppanel" id="pp-ops" role="tabpanel" hidden>
+    <div class="ptop"><span class="pnum">5</span><div><h3>Why a test alone loses money, and what fixes it</h3><p>One ₹3,999 order, line by line. Costs are my estimates until I see Sova's numbers; the shape is the point.</p></div></div>
+    <div class="g2 pnlwrap">
+      <div class="dcard rv">
+        <div class="wf" id="wf"></div>
+        <p class="note">Assumes 18% GST and ₹1,500 to win a test buyer. Supplement line: 40% of buyers take a paid 3-month plan (₹699, then ₹899 twice), after ~₹315 product cost and ₹60 shipping a month. The first order earns ~₹1,100 before ads and loses money after them; the supplement plan is what makes a buyer profitable.</p>
+      </div>
+      <div style="display:grid;gap:12px;align-content:start">
+        <div class="card rv"><h3>What one kit costs to move</h3>
+          <table class="ctable">
+            <tr><td>Box, stabiliser tube, scoop, gloves, return pouch</td><td>₹200 to ₹350</td></tr>
+            <tr><td>Forward courier, 0.5 kg</td><td>₹50 to ₹90</td></tr>
+            <tr><td>Scheduled reverse pickup, biological sample</td><td>₹120 to ₹250</td></tr>
+            <tr><td><b>Paid before the lab even starts</b></td><td><b>₹370 to ₹690</b></td></tr>
+          </table></div>
+        <div class="card rv"><h3>Where it leaks, and the fix</h3>
+          <div class="pairs">
+            <div><span>Kits never sent back</span><b>Book the pickup slot at checkout; WhatsApp the 2-day window with a 60-second video</b></div>
+            <div><span>Failed pickups</span><b>Price a lab partner's home-collection fleet against couriers in the top three metros</b></div>
+            <div><span>COD refusals</span><b>Tests prepaid only, or a ₹199 advance</b></div>
+          </div>
+          <p class="note">Reported monthly: contribution per test, supplement take-up within 30 days, kits shipped vs samples received, cost per first order by channel and ad age.</p></div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="screen light" id="me" data-curve="r">
+  <div class="wrap me">
+    <div class="photo rv"><img src="assets/img/preetam.jpg" alt="Preetam Priyabrat" loading="lazy"></div>
+    <div>
+      <div class="eyebrow rv"><b>9</b>Why me</div>
+      <h2 class="rv">I've owned a P&amp;L small enough that every rupee showed</h2>
+      <p class="body rv">I don't have ten years on a resume. I do have the habits this role needs: setting a price and living with it, reading why a month went the way it did, and fixing the operation behind a promise. I've also sold to government buyers across six entities, where pricing and compliance had to be exact.</p>
+      <div class="g4" style="margin-top:16px">
+        <div class="card rv"><b class="stat">4.5x</b><p>ROAS on my own Meta ads at Gripply, my D2C brand</p></div>
+        <div class="card rv"><b class="stat">₹117 Cr</b><p>category-wise spend sourced across 5 countries</p></div>
+        <div class="card rv"><b class="stat">40%</b><p>fewer delivery delays from a tracking dashboard I built</p></div>
+        <div class="card rv"><b class="stat">1,700+</b><p>purchase requisitions owned on 21 and 45-day targets</p></div>
+      </div>
+      <div class="g4 fitc" style="margin-top:12px">
+        <div class="card rv"><h4>Price and defend it</h4><p>Priced Gripply's range and government bids.</p></div>
+        <div class="card rv"><h4>Order-to-cash thinking</h4><p>Cycle-time targets, supplier cost line by line.</p></div>
+        <div class="card rv"><h4>Why one hook sold</h4><p>Ran my own ads; publish ad-library teardowns.</p></div>
+        <div class="card rv"><h4>Numbers I can defend</h4><p>Every figure here is sourced or marked as my estimate.</p></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-top:16px" class="rv">
+        <div class="work">
+          <a href="https://zoomies-category-preetam.netlify.app/" target="_blank" rel="noopener">Zoomies category plan</a>
+          <a href="https://protein-pantry.netlify.app/" target="_blank" rel="noopener">Protein Pantry</a>
+          <a href="https://phab-creative-teardown.netlify.app/" target="_blank" rel="noopener">Phab teardown</a>
+          <a href="https://sunny-taffy-78ea64.netlify.app/" target="_blank" rel="noopener">District electronics</a>
+          <a href="https://brewcontent-growth-strategy.netlify.app/" target="_blank" rel="noopener">BrewContent</a>
+          <a href="https://preetam-priyabrat.netlify.app/" target="_blank" rel="noopener">Portfolio</a>
+        </div>
+        <div class="contact">
+          <a class="btn" href="mailto:priyabratpreetam@gmail.com">Email me</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/preetam-priyabrat/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="tel:+918602868333">+91 86028 68333</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mist" id="sources" style="padding:40px 0">
+  <div class="wrap">
+    <h3>Sources and method</h3>
+    <p class="note">Catalogues from sova.health and consultsova.com (public Shopify data). Ads from the Meta Ad Library (India, active, 11 November 2026). Prices, marketplaces and competitor stores rechecked 15 November 2026; screenshots in the Problems section. Traffic from Similarweb, Aug to Oct 2026. Ratings on Sova's own sites are not used. Company figures as stated by Sova or the press. Images belong to Sova Health.</p>
+    <ol class="sources">
+      <li><a href="https://www.sova.health/" target="_blank" rel="noopener">sova.health</a></li>
+      <li><a href="https://consultsova.com/" target="_blank" rel="noopener">consultsova.com</a></li>
+      <li><a href="assets/reports/similarweb-sova-health-aug-oct-2026.pdf" download>Similarweb: sova.health (PDF)</a></li>
+      <li><a href="assets/reports/similarweb-consultsova-aug-oct-2026.pdf" download>Similarweb: consultsova.com (PDF)</a></li>
+      <li><a href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=IN&q=sova%20health&search_type=keyword_unordered" target="_blank" rel="noopener">Meta Ad Library</a></li>
+      <li><a href="https://www.amazon.in/s?k=sova+health" target="_blank" rel="noopener">Amazon.in listings</a></li>
+      <li><a href="https://www.1mg.com/otc/sova-plug-the-flow-sachet-for-diarrhoea-upset-stomach-1gm-each-berry-iced-tea-otc858354" target="_blank" rel="noopener">Tata 1mg</a></li>
+      <li><a href="https://www.thebiostartups.com/company-results/9/1225/startup-of-the-day-4-sova-health.html" target="_blank" rel="noopener">The Bio Startups: Sova profile</a></li>
+      <li><a href="https://mediabrief.com/healthbrief-exclusive-max-kushnir-of-sova-health/" target="_blank" rel="noopener">MediaBrief: Max Kushnir</a></li>
+      <li><a href="https://indianstartupnews.com/funding/full-stack-gut-health-startup-sova-health-raises-usd-1-million-in-a-seed-funding-round-4756352" target="_blank" rel="noopener">Seed round, June 2024</a></li>
+      <li><a href="https://www.siliconindia.com/news/startups/sova-launches-indias-first-probiotic-deficiency-test-to-personalize-gut-health-nid-238291-cid-19.html" target="_blank" rel="noopener">SiliconIndia: Probiotic Deficiency Test</a></li>
+      <li><a href="https://ibef.org/news/india-s-probiotics-market-doubles-in-five-years-hits-rs-2-070-crore-us-242-million-in-2025" target="_blank" rel="noopener">IBEF: probiotics market</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11048679" target="_blank" rel="noopener">PMC: IBS in India</a></li>
+      <li><a href="https://redcliffelabs.com/myhealth/health/gut-microbiome-test-price-in-india-whats-included-and-is-it-worth-it/" target="_blank" rel="noopener">Redcliffe Labs</a></li>
+      <li><a href="https://indianstartupnews.com/funding/gut-health-focused-consumer-nutraceutical-brand-the-good-bug-raises-rs-100-crore-9043494" target="_blank" rel="noopener">The Good Bug funding</a></li>
+      <li><a href="https://biospectrumindia.com/features/124/28695/sova-health-turning-microbiome-data-into-personalised-wellness.html" target="_blank" rel="noopener">BioSpectrum: Sova Health, Oct 2026</a></li>
+      <li><a href="https://sugermint.com/tanveer-singh/" target="_blank" rel="noopener">Sugermint: Tanveer Singh interview</a></li>
+      <li><a href="https://www.linkedin.com/in/tanveer5/recent-activity/all/" target="_blank" rel="noopener">Tanveer Singh, LinkedIn activity</a></li>
+      <li><a href="https://www.linkedin.com/company/sova-health/jobs/" target="_blank" rel="noopener">Sova Health jobs, LinkedIn</a></li>
+      <li><a href="https://www.microbiotx.com/" target="_blank" rel="noopener">MicrobioTx store</a></li>
+      <li><a href="https://microbiome.in/" target="_blank" rel="noopener">miGQ, microbiome.in</a></li>
+      <li><a href="https://guttify.co.in/" target="_blank" rel="noopener">Guttify store</a></li>
+      <li><a href="https://biospectrumindia.com/news/16/26520/guttify-launches-indias-first-affordable-saliva-based-gut-scan-kit-for-rs-199.html" target="_blank" rel="noopener">BioSpectrum: Guttify scan launch</a></li>
+      <li><a href="https://entrackr.com/fintrackr/wellbeing-nutrition-claims-rs-170-cr-revenue-in-fy25-retail-share-at-25-9765078" target="_blank" rel="noopener">Entrackr: Wellbeing Nutrition FY25</a></li>
+      <li><a href="https://www.business-standard.com/companies/news/apollo-pharmacy-expansion-7000-stores-network-125112800825_1.html" target="_blank" rel="noopener">Business Standard: Apollo Pharmacy</a></li>
+      <li><a href="https://base.com/en-IN/blog/?p=22444" target="_blank" rel="noopener">RTO rates by category, 2026</a></li>
+      <li><a href="https://base.com/en-IN/blog/?p=19110" target="_blank" rel="noopener">Offline retail economics for D2C</a></li>
+      <li><a href="https://indianretailer.com/franchisetv/archives/news/thyrocares-asset-light-network-drives-24-revenue-growth-q1-fy27" target="_blank" rel="noopener">Thyrocare Q1 FY27</a></li>
+      <li><a href="https://everlywell.com/blog/news-and-info/where-to-buy-everlywell-tests" target="_blank" rel="noopener">Everlywell retail stockists</a></li>
+      <li><a href="https://www.businesstoday.in/industry/pharma/story/generic-semaglutide-hits-india-prices-fall-90-as-companies-compete-for-diabetic-patients-521707-2026-03-21" target="_blank" rel="noopener">Business Today: generic semaglutide</a></li>
+    </ol>
+  </div>
+</section>
+
+<dialog class="proofdlg" id="proofDlg" aria-labelledby="pTitle">
+  <div class="phd"><h3 id="pTitle"></h3><button class="px" id="pClose" aria-label="Close">&#215;</button></div>
+  <div class="pimgs" id="pImgs"></div>
+  <p class="note" id="pNote"></p>
+</dialog>
+<footer>
+  <div class="wrap">
+    <img src="assets/img/sova-logo-white.png" alt="Sova">
+    <span>An independent category plan by Preetam Priyabrat, November 2026. Not affiliated with Sova Health.</span>
+  </div>
+</footer>
+
+<script>
+const ADS = [{"id":"29157987247222777","p":"S","d":"2026-10-11","v":"v","a":"proof","h":"How 50,000+ people ended years of indigestion","f":"GHS","t":"C"},{"id":"2019227315361826","p":"S","d":"2026-10-16","v":"v","a":"proof","h":"How 50,000+ people ended years of indigestion","f":"GHS","t":"C"},{"id":"1836180121140246","p":"S","d":"2026-10-11","v":"v","a":"chronic","h":"This brand fixed my 10 years of bloating and acidity","f":"GHS","t":"C"},{"id":"1872081440828580","p":"S","d":"2026-10-14","v":"v","a":"chronic","h":"A 2-minute digestion test changed everything","f":"GHS","t":"C"},{"id":"1529520139000601","p":"SH","d":"2026-10-19","v":"i","a":"fest","h":"Don't let treats ruin your stomach. Flat 55% off","f":"GMT","t":"W"},{"id":"2609238556251406","p":"S","d":"2026-10-29","v":"i","a":"chronic","h":"Not knowing why I was bloated was worse than the bloating","f":"GHS","t":"C"},{"id":"1638940064446106","p":"S","d":"2026-10-29","v":"v","a":"chronic","h":"The poop test that cured my acidity","f":"GHS","t":"C"},{"id":"2023065558383519","p":"SH","d":"2026-10-19","v":"v","a":"science","h":"The 1 test fixing years of digestive pain","f":"GMT","t":"W"},{"id":"1155373360252427","p":"S","d":"2026-10-19","v":"v","a":"chronic","h":"5-year indigestion mystery, finally solved","f":"SDT","t":"C"},{"id":"2624310154689905","p":"S","d":"2026-11-03","v":"v","a":"expert","h":"Recurring indigestion? Look beyond temporary relief","f":"SDT","t":"D"},{"id":"4115555702078041","p":"S","d":"2026-10-29","v":"v","a":"food","h":"You've tried changing your diet. Dairy?","f":"GHS","t":"C"},{"id":"2336187607166481","p":"S","d":"2026-10-29","v":"v","a":"expert","h":"3 hacks to fix your digestion","f":"GHS","t":"C"},{"id":"1866123504550341","p":"SH","d":"2026-11-06","v":"i","a":"food","h":"Know which foods truly suit your gut","f":"FIT","t":"W"},{"id":"1151392404211378","p":"S","d":"2026-11-03","v":"v","a":"expert","h":"Talking-head gut score explainer","f":"GHS","t":"C"},{"id":"1292779206357194","p":"S","d":"2026-11-06","v":"i","a":"consult","h":"Give your gut 30 minutes. ₹199 consult","f":"CON","t":"C"},{"id":"987241560546339","p":"SH","d":"2026-11-06","v":"i","a":"food","h":"Eating the same 5 'safe' foods every day?","f":"FIT","t":"W"},{"id":"1695071192328694","p":"S","d":"2026-11-02","v":"v","a":"expert","h":"Seated gut score explainer","f":"GHS","t":"C"},{"id":"2096121977684533","p":"S","d":"2026-11-09","v":"i","a":"endo","h":"Explains what a ₹15K endoscopy couldn't","f":"SDT","t":"D"},{"id":"1844823650438333","p":"S","d":"2026-10-28","v":"v","a":"chronic","h":"Your gut symptoms may be telling you more","f":"GHS","t":"C"},{"id":"1125739113768780","p":"S","d":"2026-11-03","v":"v","a":"science","h":"Most tests guess. Sova assesses.","f":"GMT","t":"W"},{"id":"2000954303920638","p":"S","d":"2026-11-03","v":"v","a":"contra","h":"₹3,999 for a gut test: scam or real? I tested it","f":"SDT","t":"D"},{"id":"1759147381869095","p":"S","d":"2026-10-14","v":"v","a":"chronic","h":"Bloating se thak chuke?","f":"GHS","t":"C"},{"id":"1190606703626738","p":"S","d":"2026-11-08","v":"v","a":"proof","h":"50K+ people fixed indigestion in 90 days","f":"SDT","t":"D"},{"id":"1607923013863756","p":"S","d":"2026-11-08","v":"v","a":"expert","h":"Book your Sova Digestion Test","f":"SDT","t":"D"},{"id":"1773159037128812","p":"S","d":"2026-11-03","v":"v","a":"contra","h":"The digestion test everyone's talking about. I tested it","f":"SDT","t":"D"},{"id":"1878907969794189","p":"S","d":"2026-11-06","v":"i","a":"consult","h":"Choose someone who gets it. ₹199 consult","f":"CON","t":"C"},{"id":"2345594226227226","p":"S","d":"2026-11-08","v":"v","a":"fest","h":"Acidity fears ruining your Diwali meal?","f":"SDT","t":"D"},{"id":"1706077554267300","p":"S","d":"2026-11-08","v":"v","a":"fest","h":"Chronic indigestion stealing your festive nights?","f":"SDT","t":"D"},{"id":"1714451360060245","p":"S","d":"2026-11-10","v":"v","a":"endo","h":"Endoscopy: ₹12,000","f":"SDT","t":"D"},{"id":"1164491409854993","p":"S","d":"2026-11-10","v":"v","a":"chronic","h":"Ate early. Still acidic and bloated. Now what?","f":"GMT","t":"W"},{"id":"1608354627169111","p":"S","d":"2026-11-10","v":"v","a":"chronic","h":"Your belly's talking","f":"GHS","t":"C"},{"id":"1280371384279814","p":"S","d":"2026-11-08","v":"v","a":"price","h":"Your gut health is worth the spend","f":"SDT","t":"D"},{"id":"1835070737814662","p":"SH","d":"2026-11-11","v":"i","a":"endo","h":"A ₹7,999 test that reads more than a ₹15,000 endoscopy","f":"GMT","t":"W"},{"id":"2219925981889470","p":"SH","d":"2026-11-11","v":"i","a":"proof","h":"50,000+ Indians tested their gut instead","f":"GMT","t":"W"},{"id":"1444194963943797","p":"S","d":"2026-11-11","v":"v","a":"chronic","h":"Chronic indigestion that keeps coming back","f":"SDT","t":"C"},{"id":"29150324751292670","p":"S","d":"2026-11-11","v":"v","a":"chronic","h":"Is your potty stuck?","f":"GHS","t":"C"},{"id":"4825597207671601","p":"SH","d":"2026-11-11","v":"v","a":"price","h":"Still think a gut test is expensive? We dropped the price","f":"GMT","t":"W"},{"id":"4602474139964932","p":"S","d":"2026-11-08","v":"v","a":"price","h":"Sova Gut Digestion Test at ₹3,999","f":"SDT","t":"D","blank":1},{"id":"1468104505190901","p":"S","d":"2026-11-03","v":"v","a":"science","h":"Good score or poor score?","f":"GHS","t":"C"},{"id":"4208959762743867","p":"S","d":"2026-11-09","v":"v","a":"contra","h":"Are gut tests worth taking? An honest answer","f":"SDT","t":"D"},{"id":"2708804992902067","p":"S","d":"2026-11-11","v":"v","a":"science","h":"3D animation inside the gut","f":"GHS","t":"C"},{"id":"1273873914934889","p":"S","d":"2026-11-11","v":"v","a":"chronic","h":"5 years of acidity solved","f":"SDT","t":"D"},{"id":"1350349407077488","p":"S","d":"2026-11-10","v":"v","a":"expert","h":"Bloated after eating? Ask an expert","f":"GHS","t":"C"},{"id":"1443422367322054","p":"S","d":"2026-11-11","v":"v","a":"expert","h":"Warning signs behind chronic indigestion","f":"GHS","t":"C"},{"id":"2662634114149736","p":"S","d":"2026-11-11","v":"v","a":"chronic","h":"5 years of indigestion, finally explained","f":"GHS","t":"C"},{"id":"1044807345295704","p":"SH","d":"2026-11-11","v":"v","a":"science","h":"India's most advanced gut microbiome test","f":"GMT","t":"W"},{"id":"1546944133859728","p":"S","d":"2026-11-11","v":"i","a":"endo","h":"Your reports look normal. Your symptoms don't.","f":"SDT","t":"D"},{"id":"2172861580001560","p":"S","d":"2026-11-11","v":"i","a":"price","h":"Flat 55% off. Stop living with chronic indigestion","f":"SDT","t":"D"},{"id":"1128387603265968","p":"S","d":"2026-11-10","v":"v","a":"chronic","h":"Years of IBS is a data gap","f":"SDT","t":"D"},{"id":"1492239082829053","p":"S","d":"2026-11-11","v":"v","a":"expert","h":"Podcast clip on gut health","f":"GHS","t":"C"},{"id":"4118503061784477","p":"SH","d":"2026-11-11","v":"v","a":"expert","h":"A gut expert explains the report","f":"GMT","t":"W"},{"id":"1894966618158455","p":"SH","d":"2026-11-11","v":"v","a":"price","h":"₹6,499 instead of ₹10,500: our biggest sale","f":"GMT","t":"W"},{"id":"2262912044558112","p":"SH","d":"2026-11-11","v":"i","a":"endo","h":"Before an endoscopy, do this stool test first","f":"SDT","t":"W"},{"id":"1502641531923457","p":"S","d":"2026-11-11","v":"i","a":"fest","h":"Don't let festive treats ruin your stomach","f":"SDT","t":"D"},{"id":"1126924590231778","p":"S","d":"2026-11-11","v":"v","a":"price","h":"55% off: decode your gut at ₹3,999","f":"SDT","t":"D"},{"id":"1913755399988601","p":"S","d":"2026-11-11","v":"i","a":"price","h":"Save flat 55%. Offer ends today","f":"SDT","t":"D"},{"id":"1494451422751498","p":"S","d":"2026-11-11","v":"v","a":"chronic","h":"Years of indigestion and still guessing?","f":"GHS","t":"C"},{"id":"4484858661767003","p":"S","d":"2026-11-11","v":"v","a":"expert","h":"The Sova Digestion Test, explained by a doctor","f":"SDT","t":"D"},{"id":"1352794766844792","p":"S","d":"2026-11-11","v":"v","a":"contra","h":"Wait. What?","f":"SDT","t":"D"},{"id":"2139406769994164","p":"S","d":"2026-11-11","v":"v","a":"chronic","h":"Reading the gut report","f":"GHS","t":"C"},{"id":"1805742450570931","p":"S","d":"2026-11-11","v":"v","a":"chronic","h":"10 years of acidity, finally explained","f":"GHS","t":"C"},{"id":"1759354585925942","p":"S","d":"2026-10-29","v":"v","a":"chronic","h":"Stop blaming stress for your acidity and bloating","f":"GHS","t":"C"},{"id":"4211326992506109","p":"SH","d":"2026-11-11","v":"v","a":"expert","h":"Decode what's off in your digestion","f":"SDT","t":"D"},{"id":"1398970832319349","p":"S","d":"2026-11-11","v":"v","a":"proof","h":"50,000 people found their acidity root cause","f":"GHS","t":"C"},{"id":"1660204325482330","p":"SH","d":"2026-11-11","v":"i","a":"chronic","h":"Only for people with acidity for more than a year","f":"SDT","t":"W"},{"id":"1177672401253333","p":"S","d":"2026-11-11","v":"v","a":"contra","h":"The digestion test celebrities don't talk about","f":"SDT","t":"D"},{"id":"1660168459146074","p":"S","d":"2026-11-11","v":"v","a":"science","h":"Just like your blood, assess your gut","f":"SDT","t":"D"},{"id":"2332606507527582","p":"S","d":"2026-11-11","v":"v","a":"science","h":"I wish I'd tested my gut sooner","f":"SDT","t":"D"},{"id":"1474425408085790","p":"S","d":"2026-11-11","v":"v","a":"contra","h":"Don't buy this digestion test","f":"SDT","t":"D"}];
+const ANG = {chronic:"Years of suffering",expert:"Doctor or expert",science:"Science",price:"Price and offer",contra:"Sceptic hook",proof:"Social proof",endo:"Endoscopy comparison",fest:"Festive",food:"Food triggers",consult:"₹199 consult"};
+const FUN = {SDT:"Digestion Test",GHS:"Free Gut Health Score",GMT:"Microbiome Test",FIT:"Food Intolerance",CON:"₹199 consult"};
+const DST = {C:"consultsova.com",D:"sova.health",W:"sova.health"};
+const mon=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+const SKU = {
+ tests:[
+  ["p-gmt","Gut Microbiome Test","₹6,499","₹10,500","Bestseller, packs up to 4","c-test","Test"],
+  ["p-sdt","Gut Digestion Test","₹3,999","₹8,500","₹4,999 on consultsova.com","c-risk","Price gap"],
+  ["p-fit","Food Intolerance Test","₹5,999","₹12,999","330+ Indian foods","c-test","Test"],
+  ["p-pdt","Probiotic Deficiency Test","₹4,999","","₹2,999 at launch","c-test","Test"],
+  ["p-ast","Antimicrobial Sensitivity","₹5,499","₹8,999","90+ antibiotics","c-test","Test"],
+  ["p-gutmet","Gut Metabolism Test","₹4,999","₹8,500","Weight management","c-test","Test"],
+  ["p-hpylori","H. pylori Test","₹1,550","₹2,500","Stool; blood ₹1,750","c-test","Test"],
+  ["","Sova NutriScan","₹1,999","","Live 30 Oct; no image yet","c-new","New",["New","launch"]],
+  ["p-consult","Gut Expert Consult","₹199","₹899","30 minutes online","c-test","Consult"],
+  ["","Free Gut Health Score","Free","","Quiz, the top Meta offer","c-test","Lead",["Free","quiz"]]
+ ],
+ sups:[
+  ["p-gutsetgo","Gut Set Go","₹499 to ₹1,749","","Amazon 3.8★ (130)","c-sup","Sachet"],
+  ["p-debloat","Pop to Debloat","₹499 to ₹1,749","","Amazon 3.5★ (140)","c-sup","Sachet"],
+  ["p-plugflow","Plug the Flow","₹499 to ₹1,749","","Amazon 3.4★ (106)","c-sup","Sachet"],
+  ["p-metfuel","Lean and Toned","₹449 to ₹1,599","","Metabolism","c-sup","Sachet"],
+  ["p-lactase","Dairy Digestive","₹249 to ₹1,049","₹299","Lactase, new on Amazon","c-sup","Enzyme"],
+  ["p-travel","Acidity Relief Tabs","₹177 to ₹597","","Travel packs, CRED","c-new","New"],
+  ["p-sleep","Sleep Snack Gummies","₹579 to ₹1,349","₹711","Amazon 4.0★ (53)","c-sup","Gummy"],
+  ["p-kit-max","Tummy Trouble Kit","₹1,917","₹2,396","Max's pick, 2023","c-sup","Bundle"],
+  ["p-kit-gargi","Good Morning Kit","₹1,917","₹2,396","Coach Gargi's pick, 2023","c-sup","Bundle"],
+  ["p-kit-ceo","CEO's Tool Kit","₹1,597","₹1,997","Tanveer's pick, 2023","c-sup","Bundle"]
+ ],
+ prog:[
+  ["p-sovax","Sova X Diagnosis","₹6,499","₹10,500","Same price as the microbiome test","c-risk","Overlap"],
+  ["p-sovax","Sova X Complete","₹22,499","₹25,499","Test plus custom blend","c-test","Personal"],
+  ["p-ibs","GutHeal for IBS","₹24,499","₹29,999","Test and 4-month coaching","c-test","Programme"],
+  ["p-gerd","GutHeal for GERD","₹24,499","₹29,999","Acidity and reflux","c-test","Programme"],
+  ["p-weight","GutHeal for Weight Loss","₹24,499","₹29,999","4 months","c-test","Programme"],
+  ["p-cleanse","Gut Cleanse, 21 days","₹3,999","","Coached","c-test","Programme"]
+ ]};
+function skuCard(s){
+  const [img,name,price,was,meta,cls,label,ph]=s;
+  const im = img ? `<img src="assets/img/${img}.jpg" alt="${name}" loading="lazy">` : `<div class="ph ${cls}">${ph[0]}<br>${ph[1]}</div>`;
+  return `<article class="sku"><div class="im">${im}</div><div><h4>${name}</h4><div class="pr num">${price}${was?`<s>${was}</s>`:""}</div><div class="meta">${meta}</div><span class="chip ${cls}">${label}</span></div></article>`;
+}
+for (const k of ["tests","sups","prog"]) document.getElementById("skus-"+k).innerHTML = SKU[k].map(skuCard).join("");
+
+document.querySelectorAll('[role="tablist"]').forEach(list=>{
+  const tabs=[...list.querySelectorAll('[role="tab"]')];
+  tabs.forEach(t=>t.addEventListener("click",()=>{
+    tabs.forEach(x=>{const on=x===t; x.setAttribute("aria-selected",on); const p=document.getElementById(x.getAttribute("aria-controls")); p.hidden=!on; if(on){p.classList.add("rv"); animate(p);} });
+  }));
+});
+
+function bars(el, entries, cls){
+  const max=Math.max(...entries.map(e=>e[1]));
+  el.innerHTML = entries.map(([k,v])=>`<div class="hbar ${cls||""}"><span>${k}</span><div class="t"><i data-w="${(v/max*100).toFixed(1)}"></i></div><b class="num">${v}</b></div>`).join("");
+}
+const cnt=(key)=>ADS.reduce((a,x)=>(a[x[key]]=(a[x[key]]||0)+1,a),{});
+const sorted=(o,lab)=>Object.entries(o).sort((a,b)=>b[1]-a[1]).map(([k,v])=>[lab[k],v]);
+bars(document.getElementById("funnelBars"), sorted(cnt("f"),FUN), "am");
+bars(document.getElementById("angleBars"), sorted(cnt("a"),ANG).slice(0,5));
+const chan=[["Paid search",36.46,1.73],["Direct",27.91,19.91],["Organic search",18.51,20.88],["Paid social",4.87,32.92],["Display",5.38,14.93],["Organic social",3.19,3.23],["Referrals",1.12,2.99],["Email",2.51,1.55]];
+const ccEl=document.getElementById("chanCompare"); if(ccEl) ccEl.innerHTML = chan.map(([k,a,b])=>`<div class="gbar"><span>${k}</span><div class="pair"><div class="b"><div class="t"><i data-w="${(a/36.46*100).toFixed(1)}" style="background:var(--forest)"></i></div><b>${a.toFixed(1)}%</b></div><div class="b"><div class="t"><i data-w="${(b/36.46*100).toFixed(1)}" style="background:var(--box)"></i></div><b>${b.toFixed(1)}%</b></div></div></div>`).join("");
+
+const byDay=cnt("d"), dayKeys=Object.keys(byDay).sort(), dmax=Math.max(...Object.values(byDay));
+if(document.getElementById("days")) document.getElementById("days").innerHTML = dayKeys.map(d=>`<div class="${d>="2026-11-10"?"hot":""}" data-h="${(byDay[d]/dmax*100).toFixed(1)}"><span>${byDay[d]}</span></div>`).join("");
+if(document.getElementById("dayl")) document.getElementById("dayl").innerHTML = dayKeys.map(d=>{const p=d.split("-");return `<span>${+p[2]}/${+p[1]}</span>`}).join("");
+
+const gal=document.getElementById("gallery"), filt=document.getElementById("filters");
+let active="all";
+const ac=cnt("a"), angles=["all",...Object.entries(ac).sort((a,b)=>b[1]-a[1]).map(x=>x[0])];
+filt.innerHTML = angles.map(a=>`<button class="f" data-a="${a}" aria-pressed="${a==="all"}">${a==="all"?"All 69":ANG[a]+" ("+ac[a]+")"}</button>`).join("");
+const fd=d=>{const p=d.split("-");return `${+p[2]} ${mon[+p[1]-1]}`};
+function render(){
+  const list=ADS.map((x,i)=>({...x,rank:i+1})).filter(x=>active==="all"||x.a===active);
+  gal.innerHTML=list.map(x=>`<a class="ad" href="https://www.facebook.com/ads/library/?id=${x.id}" target="_blank" rel="noopener">
+    <div class="im">${x.blank?'<span style="color:#8fa99b;font-size:12px;padding:12px;text-align:center">Video preview not available</span>':`<img src="assets/ads/${x.id}.jpg" alt="${x.h.replace(/"/g,'&quot;')}" loading="lazy">`}<span class="fmt">${x.v==="v"?"Video":"Image"}</span><span class="rk">#${x.rank}</span></div>
+    <div class="tx"><h5>${x.h}</h5><span class="chip c-test">${FUN[x.f]}</span><span class="m">Since ${fd(x.d)}, to ${DST[x.t]}</span></div></a>`).join("");
+  gal.scrollTo({left:0});
+}
+filt.addEventListener("click",e=>{const b=e.target.closest(".f"); if(!b) return; active=b.dataset.a; filt.querySelectorAll(".f").forEach(x=>x.setAttribute("aria-pressed",x===b)); render();});
+document.getElementById("prev").onclick=()=>gal.scrollBy({left:-gal.clientWidth*.8,behavior:"smooth"});
+document.getElementById("next").onclick=()=>gal.scrollBy({left:gal.clientWidth*.8,behavior:"smooth"});
+render();
+
+document.querySelectorAll(".mtable,.ctab").forEach(t=>{const h=[...t.querySelectorAll("thead th")].map(x=>x.textContent); t.querySelectorAll("tbody tr").forEach(r=>[...r.children].forEach((td,i)=>td.setAttribute("data-l",h[i]||"")));});
+
+/* signature curves */
+const CURVES=["M20 300 C20 150 140 150 140 230 S260 330 260 200 S380 60 380 190 S490 330 510 210 S600 70 620 140","M10 120 C90 20 160 220 250 140 S400 20 460 150 S560 300 630 200","M20 220 C80 80 180 80 220 200 S340 330 400 200 S520 60 620 120"];
+document.querySelectorAll("[data-curve]").forEach((s,i)=>{
+  s.insertAdjacentHTML("afterbegin",`<svg class="curve ${s.dataset.curve}" viewBox="0 0 640 360" aria-hidden="true"><path d="${CURVES[i%3]}"/></svg>`);
+});
+
+/* menu + progress wave */
+const menu=document.getElementById("menu"), mb=document.getElementById("menuBtn");
+mb.addEventListener("click",()=>{const o=menu.classList.toggle("open"); mb.setAttribute("aria-expanded",o);});
+menu.addEventListener("click",e=>{if(e.target.tagName==="A"){menu.classList.remove("open"); mb.setAttribute("aria-expanded",false);}});
+const links=[...menu.querySelectorAll("a")];
+const groups={thesis:["thesis"],market:["market"],portfolio:["portfolio"],problems:["problems"],comp:["comp"],ads:["ads"],sites:["sites"],proposals:["proposals"],me:["me","sources"]};
+const pl=document.getElementById("pline");
+let d="M0 4"; for(let x=0;x<1000;x+=20){d+=` Q ${x+5} 0 ${x+10} 4 T ${x+20} 4`;} pl.setAttribute("d",d);
+const PL=pl.getTotalLength(); pl.style.strokeDasharray=PL; pl.style.strokeDashoffset=PL;
+function onScroll(){
+  const h=document.documentElement.scrollHeight-innerHeight; pl.style.strokeDashoffset=PL*(1-Math.min(1,scrollY/h));
+  let cur=null; document.querySelectorAll(".screen,#sources").forEach(s=>{if(s.getBoundingClientRect().top<innerHeight*.4) cur=s.id;});
+  links.forEach(l=>{const k=l.getAttribute("href").slice(1); l.classList.toggle("on", !!cur && groups[k].includes(cur));});
+}
+addEventListener("scroll",onScroll,{passive:true}); onScroll();
+
+/* reveal one by one + chart animations */
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+document.querySelectorAll(".screen").forEach(s=>{ s.querySelectorAll(".rv").forEach((el,i)=>el.style.setProperty("--d",Math.min(i*0.07,1.1)+"s")); });
+function animate(el){
+  el.querySelectorAll("[data-w]").forEach(b=>b.style.width=b.dataset.w+"%");
+  el.querySelectorAll("[data-h]").forEach(b=>b.style.height=b.dataset.h+"%");
+  el.querySelectorAll("[data-count]").forEach(n=>{
+    if(n.dataset.done) return; n.dataset.done=1; const end=+n.dataset.count;
+    if(reduce){n.textContent=end;return}
+    const t0=performance.now(); const step=t=>{const p=Math.min(1,(t-t0)/1300); n.textContent=Math.round(end*(1-Math.pow(1-p,3))); if(p<1) requestAnimationFrame(step)}; requestAnimationFrame(step);
+  });
+  const seg=el.querySelector("#donutSeg"); if(seg) seg.style.strokeDashoffset=289.03*(1-0.7038);
+  el.querySelectorAll(".line path, .curve path").forEach(p=>{ if(p.dataset.done) return; p.dataset.done=1; if(reduce) return; const L=p.getTotalLength(); p.style.strokeDasharray=L; p.style.strokeDashoffset=L; p.getBoundingClientRect(); p.style.transition="stroke-dashoffset 2s cubic-bezier(.65,0,.35,1) .2s"; p.style.strokeDashoffset=0; });
+}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in"); animate(e.target); io.unobserve(e.target);}}),{threshold:.18});
+document.querySelectorAll(".screen").forEach(s=>io.observe(s));
+
+/* kit box: lid opens with scroll, plan pages rise out */
+const hero=document.getElementById("top"), scene=document.getElementById("scene"), cue=document.getElementById("cue");
+const papers=[...scene.querySelectorAll(".paper")];
+const navH=62, mobile=matchMedia("(max-width:960px)");
+const ease=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+function setBox(p){
+  scene.style.setProperty("--p",ease(p).toFixed(4));
+  papers.forEach(el=>{const st=+el.dataset.start; const q=ease(Math.max(0,Math.min(1,(p-st)/(1-st)))); el.style.transform=`translateZ(${el.dataset.z}px) translateY(${-q*el.dataset.rise*(innerHeight<860&&!mobile.matches?.78:1)}px) rotateX(${q*-6}deg)`;});
+  cue.style.opacity=p>.08?0:1;
+}
+function boxScroll(){
+  if(mobile.matches) return;
+  const total=hero.offsetHeight-(innerHeight-navH); const p=Math.max(0,Math.min(1,-hero.getBoundingClientRect().top/total)); setBox(p);
+}
+if(reduce){setBox(1)}
+else if(mobile.matches){setBox(0); let t0=null; setTimeout(()=>requestAnimationFrame(function step(t){t0=t0||t; const p=Math.min(1,(t-t0)/2200); setBox(p); if(p<1) requestAnimationFrame(step);}),900);}
+else{addEventListener("scroll",boxScroll,{passive:true}); boxScroll();}
+hero.querySelectorAll(".rv").forEach((el,i)=>el.style.setProperty("--d",(i*0.08)+"s"));
+animate(hero);
+const sq=document.getElementById("squiggle");
+if(sq && !reduce){const L=sq.getTotalLength(); sq.style.strokeDasharray=L; sq.style.strokeDashoffset=L; sq.getBoundingClientRect(); sq.style.transition="stroke-dashoffset 2.2s cubic-bezier(.65,0,.35,1) .6s"; sq.style.strokeDashoffset=0;}
+/* product mockups for new ideas */
+const MOCK={
+ jar:(c,t,s)=>`<rect x="55" y="16" width="50" height="14" rx="5" fill="#203129"/><rect x="50" y="28" width="60" height="72" rx="14" fill="${c}"/><rect x="50" y="50" width="60" height="32" fill="#fff"/><text x="80" y="64" text-anchor="middle" class="mt">${t}</text><text x="80" y="76" text-anchor="middle" class="ms">${s}</text><circle cx="124" cy="92" r="8" fill="${c}" opacity=".85"/><circle cx="138" cy="84" r="6" fill="${c}" opacity=".6"/><circle cx="30" cy="92" r="7" fill="${c}" opacity=".7"/>`,
+ pouch:(c,t,s)=>`<path d="M52 22 H108 L114 98 Q80 104 46 98 Z" fill="${c}"/><rect x="52" y="18" width="56" height="8" rx="2" fill="#203129" opacity=".55"/><rect x="56" y="48" width="48" height="30" rx="4" fill="#fff"/><text x="80" y="62" text-anchor="middle" class="mt">${t}</text><text x="80" y="73" text-anchor="middle" class="ms">${s}</text><rect x="118" y="62" width="14" height="34" rx="3" fill="${c}" opacity=".55" transform="rotate(12 125 79)"/>`,
+ box:(c,t,s)=>`<path d="M44 34 L104 34 L120 24 L60 24 Z" fill="${c}" opacity=".7"/><path d="M104 34 L120 24 L120 92 L104 102 Z" fill="${c}" opacity=".55"/><rect x="44" y="34" width="60" height="68" fill="${c}"/><rect x="48" y="58" width="52" height="28" rx="3" fill="#fff"/><text x="74" y="71" text-anchor="middle" class="mt">${t}</text><text x="74" y="81" text-anchor="middle" class="ms">${s}</text>`,
+ strip:(c,t,s)=>`<rect x="28" y="40" width="104" height="44" rx="12" fill="${c}"/><circle cx="56" cy="62" r="11" fill="#fff" opacity=".9"/><circle cx="80" cy="62" r="11" fill="#fff" opacity=".9"/><circle cx="104" cy="62" r="11" fill="#fff" opacity=".9"/><text x="80" y="100" text-anchor="middle" class="mt dk">${t}</text><text x="80" y="30" text-anchor="middle" class="ms dk">${s}</text>`,
+ kit:(c,t,s)=>`<path d="M40 36 L106 36 L122 26 L56 26 Z" fill="#4a3a9a"/><path d="M106 36 L122 26 L122 90 L106 100 Z" fill="#251a55"/><rect x="40" y="36" width="66" height="64" fill="${c}"/><path d="M44 92 C56 70 66 96 78 74 S96 84 102 70" stroke="#f3bf5a" stroke-width="6" fill="none" stroke-linecap="round"/><text x="73" y="54" text-anchor="middle" class="mt" style="fill:#f6c24d">${t}</text><text x="73" y="65" text-anchor="middle" class="ms" style="fill:#fff">${s}</text><rect x="128" y="30" width="5" height="56" rx="2" fill="#c3d0c9"/><ellipse cx="130.5" cy="28" rx="6" ry="8" fill="#e8eef0"/>`,
+ report:(c,t,s)=>`<rect x="48" y="16" width="64" height="88" rx="8" fill="#fff" stroke="#e1e9e4" stroke-width="2"/><rect x="56" y="26" width="34" height="6" rx="3" fill="#203129"/><rect x="56" y="38" width="48" height="4" rx="2" fill="#e1e9e4"/><rect x="56" y="46" width="40" height="4" rx="2" fill="#e1e9e4"/><rect x="56" y="58" width="12" height="28" rx="2" fill="#1fd286"/><rect x="72" y="66" width="12" height="20" rx="2" fill="#c3d0c9"/><rect x="88" y="52" width="12" height="34" rx="2" fill="#33266e"/><rect x="92" y="78" width="54" height="22" rx="11" fill="${c}"/><text x="119" y="93" text-anchor="middle" class="mt" style="fill:${c==="#fbb000"?"#203129":"#fff"}">${t}</text><text x="80" y="114" text-anchor="middle" class="ms dk">${s}</text>`
+};
+document.querySelectorAll(".mock").forEach(m=>{
+  const f=MOCK[m.dataset.m]; if(!f) return;
+  m.style.setProperty("--mc",m.dataset.c);
+  m.innerHTML=`<svg viewBox="0 0 160 118" role="img" aria-label="${m.dataset.t} ${m.dataset.s} mockup">${f(m.dataset.c,m.dataset.t,m.dataset.s)}</svg>`;
+});
+
+/* unit economics waterfall */
+const WF=[["Price paid",3999,"t"],["GST at 18%",-610],["Kit and packaging",-300],["Two-way shipping",-250],["Lab and report",-1400],["45-min expert consult",-250],["Payment fees",-70],["Before marketing",null,"t"],["Cost to win the buyer",-1500],["First order",null,"t"],["Supplement plan (40% of buyers)",549,"p"],["Per test buyer",null,"t"]];
+(function(){
+  const el=document.getElementById("wf"); if(!el) return;
+  const lo=-700, hi=4100, R=hi-lo, x=v=>((v-lo)/R*100);
+  let run=0, html="";
+  WF.forEach(([lab,v,k],idx)=>{
+    let a,b,cls;
+    if(k==="t"){ if(v!==null) run=v; a=Math.min(0,run); b=Math.max(0,run); cls=run<0?"tn":"tot"; v=run; }
+    else { a=Math.min(run,run+v); b=Math.max(run,run+v); run+=v; cls=v<0?"neg":"pos"; }
+    const txt=(k==="t"?"":(v>0?"+":"−"))+"₹"+Math.abs(v).toLocaleString("en-IN");
+    const tt=k==="t"&&v<0?"−₹"+Math.abs(v).toLocaleString("en-IN"):txt;
+    html+=`<div class="wr ${k==="t"?"wt":""}" style="--i:${(idx*0.09).toFixed(2)}"><span>${lab}</span><div class="wtk"><i class="z" style="left:${x(0)}%"></i><b class="${cls}" style="left:${x(a)}%;width:${Math.max(.6,(b-a)/R*100)}%"></b></div><em class="${cls}">${tt}</em></div>`;
+  });
+  el.innerHTML=html;
+})();
+
+/* proof viewer */
+const PROOF={
+ price:{t:"Same test, different prices",i:[["price-sovahealth.jpg","sova.health: Digestion Test at ₹3,999 (the image strikes out ₹8,999, the page ₹8,500)","https://www.sova.health/products/sova-gut-test-for-complete-digestive-relief"],["price-consultsova.jpg","consultsova.com: the same test at ₹4,999","https://consultsova.com/products/gut-digestion-test"],["price-digestion-lp.jpg","digestion.sova.health: the button says ₹4,999","https://digestion.sova.health/"],["price-digestion-pdp.jpg","The page that button opens charges ₹3,999","https://digestion.sova.health/products/sova-gut-digestion-test"],["ad-7999.jpg","Live Meta ad: \"This ₹7,999 gut test\" for the Microbiome Test","https://www.facebook.com/ads/library/?id=1835070737814662"],["gmt-6499-same-box.jpg","sova.health sells that test at ₹6,499","https://www.sova.health/products/gut-microbiome-test"]],n:"Screenshots taken 15 November 2026. Prices also confirmed in each store's public Shopify product data."},
+ choice:{t:"Two tests that look the same",i:[["price-sovahealth.jpg","₹3,999 Digestion Test","https://www.sova.health/products/sova-gut-test-for-complete-digestive-relief"],["gmt-6499-same-box.jpg","₹6,499 Microbiome Test: the same box","https://www.sova.health/products/gut-microbiome-test"]],n:"Both product descriptions open with the same sentence: \"...is the most comprehensive test for the gut, determining the exact number and composition of bacteria in your gut through genomic sequencing.\" Results: 20 days for one, 30 for the other."},
+ trust:{t:"Four customer counts",i:[["ad-50000.jpg","Live Meta ad: 50,000+ Indians tested","https://www.facebook.com/ads/library/?id=2219925981889470"],["price-digestion-lp.jpg","digestion.sova.health: 50,000+ Indians trust Sova","https://digestion.sova.health/"],["trust-consultsova.jpg","consultsova.com: 100,000+ customers and 500,000+ profiles in 12 months","https://consultsova.com/"]],n:"The fourth figure, 35,000+ samples, is from CEO Tanveer Singh's interview with Sugermint, May 2025."},
+ bridge:{t:"Sachets on Amazon, without the test",i:[["amazon-ratings.jpg","Amazon search, 15 Nov 2026: Sova sachets at 3.4 to 3.8★","https://www.amazon.in/s?k=sova+health+probiotic"],["amazon-sponsored.jpg","Sova pays for brand ads on Amazon for the sachets","https://www.amazon.in/s?k=sova+health+probiotic"]],n:"In the same search, Tata 1mg Probiotics shows 4.2★ from 2,100 ratings at ₹395. The 69 live Meta ads (11 November) send people to tests, the free quiz and the ₹199 consult; none to a supplement."},
+ bait:{t:"How the ₹199 consult reads",i:[["review-199-bait.png","Review on consultsova.com's Digestion Test page, 9 November 2026","https://consultsova.com/products/gut-digestion-test"]],n:"Translation: \"They take ₹200, then tell you to do a ₹5,000 test. It happens like this in 99% of cases.\" Quoted as a buyer's words, not as a rating."},
+ wait:{t:"The wait for a report",i:[["turnaround.jpg","consultsova.com: reporting generally takes 2 to 3 weeks","https://consultsova.com/products/gut-digestion-test"]],n:"sova.health's product data: results \"within 20 Days\" for the Digestion Test and \"within 30 Days\" for the Microbiome Test. The page also asks for the sample within 2 days of the kit arriving."},
+ rivals:{t:"Competitor price lists",i:[["migq-lineup.jpg","miGQ (microbiome.in): Discovery ₹9,999, Probiotics ₹3,999","https://microbiome.in/"],["microbiotx-lineup.jpg","MicrobioTx: Gut Function ₹3,540, Microbiome and Metabolome ₹7,999, Oral test sold out","https://www.microbiotx.com/"],["guttify-free-scan.jpg","Guttify: \"Free Gut Scan on Orders ₹999+\" banner","https://guttify.co.in/"]],n:"Checked 15 November 2026. Full ranges read from each store's public product data."}
+};
+const dlg=document.getElementById("proofDlg");
+function openProof(k){
+  const p=PROOF[k]; if(!p) return;
+  document.getElementById("pTitle").textContent=p.t;
+  document.getElementById("pImgs").innerHTML=p.i.map(([f,c,u])=>`<figure><a href="assets/proof/${f}" target="_blank" rel="noopener"><img src="assets/proof/${f}" alt="${c.replace(/"/g,"&quot;")}"></a><figcaption>${c}. <a href="${u}" target="_blank" rel="noopener">Open the page</a></figcaption></figure>`).join("");
+  document.getElementById("pNote").textContent=p.n;
+  if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open","");
+}
+document.addEventListener("click",e=>{const b=e.target.closest(".pbtn"); if(b) openProof(b.dataset.proof);});
+document.getElementById("pClose").addEventListener("click",()=>dlg.close());
+dlg.addEventListener("click",e=>{if(e.target===dlg) dlg.close();});
+
+/* icon set (stroke icons) */
+const ICO={
+ tag:'<path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.7 8.7a2.4 2.4 0 0 0 3.4 0l6.6-6.6a2.4 2.4 0 0 0 0-3.4z"/><circle cx="7.5" cy="7.5" r="1.5"/>',
+ copy:'<rect x="8" y="8" width="14" height="14" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>',
+ users:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+ repeat:'<path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/>',
+ message:'<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/>',
+ clock:'<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',
+ store:'<path d="M3 9l1.5-5h15L21 9"/><path d="M3 9h18v2a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0z"/><path d="M5 13v8h14v-8"/><path d="M10 21v-5h4v5"/>',
+ flask:'<path d="M9 3h6"/><path d="M10 3v6.5L4.5 19a1.5 1.5 0 0 0 1.3 2h12.4a1.5 1.5 0 0 0 1.3-2L14 9.5V3"/><path d="M7 15h10"/>',
+ megaphone:'<path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>',
+ truck:'<path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62L18.3 9.38a1 1 0 0 0-.78-.38H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/>',
+ target:'<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
+ trending:'<path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/>',
+ link:'<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>',
+ pill:'<path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/>',
+ activity:'<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',
+ globe:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
+ search:'<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>',
+ alert:'<path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/>',
+ check:'<circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>'
+};
+document.querySelectorAll("[data-i]").forEach(el=>{const p=ICO[el.dataset.i]; if(p) el.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;});
+/* small squiggle under every section heading */
+document.querySelectorAll(".screen .head h2").forEach(h=>h.insertAdjacentHTML("afterend",'<svg class="sq" viewBox="0 0 120 12" aria-hidden="true"><path d="M2 8 Q 12 0 22 6 T 42 6 T 62 6 T 82 6 T 102 6 T 118 4"/></svg>'));
+
+/* plan cards: full reasoning in a pop-up */
+const EXPLAIN={
+ m1:{t:"Sell a supplement after every test",tab:"tp-mkt",tabl:"Marketing and retention",
+  mean:"The kit is paid, not free. When the report and the 45-minute consult are done, the expert recommends one Sova sachet that matches the result, and the customer can buy a 30-day kit there and then at ₹699, ₹200 below the usual ₹899. After that, WhatsApp reminds them to refill at full price before the sachets run out. The test is the door; the monthly sachet is the repeat revenue.",
+  found:["0 of 69 live Meta ads promote a supplement, Sova X or a coaching programme. They sell the Digestion Test (30 ads), the free Gut Health Score (25), the Microbiome Test (10), Food Intolerance (2) and the ₹199 consult (2).","A test is a one-time purchase at ₹3,999 to ₹6,499. Sova's 30-sachet packs cost ₹849 to ₹949 (Gut Set Go and Pop to Debloat are ₹899) and run out every month."],
+  math:[["Test buyers","1,000"],["Share who buy the kit (my assumption)","25%, so 250 people"],["What each pays: ₹699 first month + ₹899 × 2 refills","₹2,497"],["Revenue: 250 × ₹2,497","₹6,24,250"],["Cost of the ₹200 report-day discount: 250 × ₹200","₹50,000, paid only by buyers"],["Contribution after ~₹315 product cost and ₹60 shipping a month","₹3.4 L, about ₹1,372 per kit buyer"]],
+  note:"Revenue and contribution, not net profit. Product cost (about 35% of the ₹899 price) and shipping are my estimates; the P&L tab uses 40% take-up as the upside case.",
+  alt:{h:"Why not give the first kit free",rows:[["Cost per test buyer: ~₹315 product + ₹60 shipping","₹375"],["Cost for 1,000 test buyers, whether they want it or not","₹3.75 L"],["Contribution from one paid refill month: ₹899 − ₹315 − ₹60","₹524"],["Paid months needed just to recover the giveaway: ₹3.75 L ÷ ₹524","about 716"],["That means","24% of all buyers paying for 3 more months, only to break even"]],note:"A free kit spends on everyone; a ₹200 discount spends only on people who buy. If Sova wants a free taste, a 3-sachet sample inside the test box (about ₹40) is the cheaper version to trial."},
+  src:"Meta Ad Library, India, active ads on the Sova and Sova Health pages, 11 Nov 2026. Prices from sova.health's product data, 15 Nov 2026."},
+ m2:{t:"One price per test, and a test chooser",tab:"tp-price",tabl:"Pricing and conversion",
+  mean:"Every test should have one price on every store, landing page and ad, and one honest 'original' price. A three-question chooser (main symptom, how long, what's been tried) should send each visitor to one test, so nobody has to decode two near-identical products.",
+  found:["The Gut Digestion Test is ₹3,999 on sova.health and at checkout on digestion.sova.health, but ₹4,999 on consultsova.com. The digestion landing page's own button says ₹4,999.","A live ad calls the Microbiome Test 'this ₹7,999 gut test'; sova.health sells it at ₹6,499.","The struck-out 'original' price is ₹8,500 on the page and ₹8,999 in the product image.","The ₹3,999 and ₹6,499 tests use the same box photo and open with the same sentence: 'the most comprehensive test for the gut'."],
+  math:[["Price gap on the same test","₹4,999 − ₹3,999 = ₹1,000"],["Media cost to fix","₹0: page and ad edits only"]],
+  note:"If Sova wants to learn whether ₹4,999 converts, I'd test it properly: ₹3,999 against ₹4,499 on the same page for four weeks, not two prices in public.",
+  src:"Screenshots and public Shopify product data from sova.health, digestion.sova.health and consultsova.com, 15 Nov 2026. Ad ID 1835070737814662 in the Meta Ad Library."},
+ m3:{t:"Fix the website before buying more traffic",tab:"tp-price",tabl:"Pricing and conversion",
+  mean:"More ad spend into a page that loses most visitors is the expensive way to grow. Lead the homepage with the ₹3,999 'start here' test instead of the ₹6,499 one, show 'report in 2 to 3 weeks' beside the price, use one customer number, and reuse consultsova.com's one-button layout for every ad landing page.",
+  found:["Bounce rate (the share of visits that leave after viewing one page): 54.7% on sova.health against 40.0% on consultsova.com.","Visits from August to October 2026: 4.27 lakh on sova.health and 1.80 lakh on consultsova.com, 6.07 lakh in all."],
+  math:[["Visits a month: 6.07 L ÷ 3","about 2 lakh"],["Extra conversion tested","+0.25 percentage points"],["Extra orders: 2,00,000 × 0.25%","500 a month"],["Average order (my assumption: mix of tests and sachets)","₹2,000"],["Extra revenue: 500 × ₹2,000","about ₹10 L a month"]],
+  note:"Sova's actual conversion rate isn't public, so this shows sensitivity, not a forecast.",
+  src:"Similarweb reports for sova.health and consultsova.com, Aug to Oct 2026 (downloadable in the Websites section). Homepage checked 15 Nov 2026."},
+ m4:{t:"Put the sachets on chemist shelves",tab:"tp-chan",tabl:"New channels",
+  mean:"Indians already treat acidity and bloating at the chemist counter. Sova's supplements, not its tests, belong there: acidity tabs, Pop to Debloat, Dairy Digestive and Plug the Flow, each pack with a QR code to the free gut quiz so the shelf also sells tests. Start with 300 chemists in Delhi NCR through one distributor, then chains like Apollo, then malls and airports.",
+  found:["Sova's sachets are on sova.health, Amazon and Tata 1mg only. None are on chemist shelves or on Blinkit, Zepto or Instamart.","India's probiotic market was ₹2,070 Cr in 2025, over 90% of it pharma brands.","Wellbeing Nutrition made about ₹170 Cr in FY25, 25% of it from pharmacies, modern trade, malls and airports across 3,700+ stores.","Shelf sales carry no RTO (orders refused at the door and shipped back), which costs ₹180 to ₹240 each online."],
+  math:[["Stores","1,000"],["Packs sold per store a month (my assumption)","6"],["Pack price (today's Amazon price)","₹549"],["Share Sova keeps after retailer 20 to 30%, distributor 8 to 12%, schemes and GST","55%"],["Revenue a year: 1,000 × 6 × ₹549 × 55% × 12","about ₹2.2 Cr"],["Same maths at 300 and 3,000 stores","₹65 L and ₹6.5 Cr"]],
+  note:"The 6-packs assumption is exactly what the pilot tests: expand only if 60% of stock sells through in 30 days.",
+  src:"IBEF (PharmaTrac) on probiotics; Entrackr on Wellbeing Nutrition FY25; base.com on offline trade margins and RTO costs; Amazon.in, 15 Nov 2026."},
+ m5:{t:"Sell tests through people customers already trust",tab:"tp-chan",tabl:"New channels",
+  mean:"B2B2C: a partner sells Sova's test to its own patients or staff and earns a fee only when the test is completed. Start with a co-branded hospital test pass at the gastro desk, then health-check add-ons, doctor and nutritionist codes, employers, insurers' OPD wallets and CRED.",
+  found:["Sova announced tie-ups with Sri Ganga Ram Hospital and Medanta in July 2026, works with 50+ nutritionists, and lists acidity travel packs on CRED.","Sova is hiring for 'Healthcare B2B Sales: Partnership and Alliance' right now.","Thyrocare's partner business grew 26% in Q1 FY27; Everlywell sells home test kits off the shelf at CVS, Target and Walgreens."],
+  math:[["Partner fee at 15% of ₹3,999","about ₹600 per completed test"],["Paid-media cost to win a test buyer (my assumption, used in the P&L)","₹1,500, spent before anyone buys"]],
+  note:"The partner fee is paid only after a sample reaches the lab, so a failed pilot costs little.",
+  src:"BioStartups, Jul 2026; Sova Health jobs on LinkedIn, Nov 2026; Indian Retailer on Thyrocare Q1 FY27; Everlywell's stockist page."},
+ m6:{t:"Launch the products the range lacks",tab:"tp-npd",tabl:"New products",
+  mean:"Ten products, supplements first: probiotic gummies, kids' tummy gummies, a GLP-1 gut companion, a constipation synbiotic, a women's gut formula, an after-antibiotic kit and a ₹99 acidity strip. Then three tests and services: a free saliva scan inside sachet orders, extra reports from the stool sample already in the lab, and a 90-day retest.",
+  found:["Constipation is a top-three symptom in Sova's own ads ('Is your potty stuck?'), yet no Sova sachet targets it.","Sova's Sleep gummies are its best-rated product on Amazon (4.0★ from 53 ratings), so the gummy format already works.","Generic semaglutide (weight-loss jabs) launched in India in March 2026; constipation is a common side effect.","Guttify gives its saliva scan free with orders over ₹999 to sell ₹599 supplement tubes."],
+  math:[["Saliva scan cost: strip plus 10 minutes of expert time (estimate)","about ₹200"],["Paid for by the basket rising from ₹899 to ₹1,499","+₹600 a basket"],["Same-sample add-on: 1 in 5 buyers × ₹1,499","about +₹300 per order"]],
+  note:"Prices are starting points to test, not decisions.",
+  src:"Meta Ad Library; Amazon.in, 15 Nov 2026; Business Today, Mar 2026; Guttify's store and BioSpectrum."}
+};
+function openExplain(k){
+  const e=EXPLAIN[k]; if(!e) return;
+  document.getElementById("pTitle").textContent=e.t;
+  document.getElementById("pImgs").innerHTML=`<div class="exp">
+    <div class="exb"><h4>What I mean</h4><p>${e.mean}</p></div>
+    <div class="exb"><h4>What I found</h4><ul>${e.found.map(x=>`<li>${x}</li>`).join("")}</ul></div>
+    <div class="exb exm"><h4>The maths</h4><table>${e.math.map(([a,b],i)=>`<tr class="${i===e.math.length-1?"last":""}"><td>${a}</td><td>${b}</td></tr>`).join("")}</table><p class="exn">${e.note}</p></div>
+    ${e.alt?`<div class="exb exalt"><h4>${e.alt.h}</h4><table>${e.alt.rows.map(([a,b],i)=>`<tr class="${i===e.alt.rows.length-1?"last":""}"><td>${a}</td><td>${b}</td></tr>`).join("")}</table><p class="exn2">${e.alt.note}</p></div>`:""}
+    <div class="exf"><span><b>Sources:</b> ${e.src}</span><button type="button" class="btn" data-go="${e.tab}">Open the proposal: ${e.tabl}</button></div></div>`;
+  document.getElementById("pNote").textContent="";
+  dlg.classList.add("wide"); if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open","");
+}
+document.addEventListener("click",ev=>{
+  const c=ev.target.closest("[data-explain]"); if(c){openExplain(c.dataset.explain); return;}
+  const g=ev.target.closest("[data-go]"); if(g){dlg.close(); const t=document.getElementById(g.dataset.go); if(t){t.click(); document.getElementById("proposals").scrollIntoView({behavior:"smooth"});}}
+});
+dlg.addEventListener("close",()=>dlg.classList.remove("wide"));
+
+document.querySelectorAll("[data-tab]").forEach(a=>a.addEventListener("click",()=>{const t=document.getElementById(a.dataset.tab); if(t) t.click();}));
+</script>
+</body>
+</html>
